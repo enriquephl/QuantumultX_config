@@ -100,7 +100,7 @@ host, gdmf.apple.com, reject
 host-suffix, ls.apple.com, LocationServices
 ```
 
-+ (optional) iCloud Gateway
++ (optional) iCloud Gateway (需搭配对应的 `iCloud` 策略组)
 ```nasm
 host, gateway.icloud.com, iCloud
 ```
