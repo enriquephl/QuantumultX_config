@@ -136,7 +136,7 @@ static=WeChat, direct, HK, SG, img-url=https://raw.githubusercontent.com/Koolson
 
 + 本地分流规则
 
-需搭配 `WeChat` 策略组，推荐 🇭🇰HK 或 🇸🇬SG 节点。
+需搭配 `WeChat` 策略组，推荐 `🇭🇰HK` 或 `🇸🇬SG` 节点。
 
 ```nasm
 host, dns.wechat.com, reject
