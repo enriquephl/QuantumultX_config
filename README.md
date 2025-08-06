@@ -52,6 +52,12 @@ host, xpis-mob-xcdn.youku.com, reject
 
 ## Apple 补完计画
 
+### (optional) 策略组
+```ini
+static=LocationServices, direct, proxy, EU, HK, JP, SG, TW, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Find_My.png
+static=News, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
+```
+
 ### 远程分流规则
 ```
 *iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)
@@ -68,12 +74,6 @@ host-suffix, cdn-apple.com, direct
 # 解锁非国行设备 apple intelligence 在国内使用，请用支持 ChatGPT 的节点。
 ;host, apple-relay.apple.com, TW_ISP, via-interface=%TUN%
 ;host, apple-relay.cloudflare.com, TW_ISP, via-interface=%TUN%
-```
-
-+ (optional) **策略组**
-```ini
-static=LocationServices, direct, proxy, EU, HK, JP, SG, TW, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Find_My.png
-static=News, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
 ```
 
 + (optional) 屏蔽更新提示
