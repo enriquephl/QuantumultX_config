@@ -16,7 +16,7 @@
 + 适用机场 + 代理链玩家
 + 优化 web3 体验
 + (optional) 使用家宽 IP + 代理链解锁对 IP 纯净度要求高的服务 **(请自备)**
-+ (optional) Apple 服务干净化
++ (optional) Apple 服务补完
 + (optional) [iRingo](https://nsringo.github.io/) 解锁 Apple News Siri **(由于 ios26 大量采用 [`countryd`](https://github.com/orgs/NSRingo/discussions/63)，建议[停留在 ios18](https://ai.id64.com/apple/zuzhi/index.html)以免不测)**
 
 ## 去广告、去追踪器
@@ -50,7 +50,7 @@ host, xpis-xcdn.youku.com, reject
 host, xpis-mob-xcdn.youku.com, reject
 ```
 
-## Apple 干净化
+## Apple 补完计画
 
 ### 远程分流规则
 ```
@@ -63,9 +63,11 @@ AppleServices 直连
 
 ### 本地分流规则
 
-+ 修正
 ```nasm
 host-suffix, cdn-apple.com, direct
+# 解锁非国行设备 apple intelligence 在国内使用，请用支持 ChatGPT 的节点。
+;host, apple-relay.apple.com, TW_ISP, via-interface=%TUN%
+;host, apple-relay.cloudflare.com, TW_ISP, via-interface=%TUN%
 ```
 
 + (optional) **策略组**
