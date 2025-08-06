@@ -21,13 +21,13 @@
 
 ## 去广告、去追踪器
 
-+ 远程分流规则
+### 远程分流规则
 ```ini
 https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf, tag=Privacy, force-policy=reject, inserted-resource=true, enabled=true
 https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/reject-no-drop.conf, tag=RejectNoDrop, force-policy=reject, opt-parser=true, enabled=true
 ```
 
-+ 本地分流规则
+### 本地分流规则
 
 ~~给他们 PR 又不回，只好自己来~~
 
@@ -52,7 +52,7 @@ host, xpis-mob-xcdn.youku.com, reject
 
 ## Apple 干净化
 
-+ 远程分流规则
+### 远程分流规则
 ```
 *iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)
 AppleCN 直连
@@ -62,6 +62,17 @@ AppleServices 直连
 ```
 
 ### 本地分流规则
+
++ 修正
+```nasm
+host-suffix, cdn-apple.com, direct
+```
+
++ (optional) **策略组**
+```ini
+static=LocationServices, direct, proxy, EU, HK, JP, SG, TW, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Find_My.png
+static=News, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
+```
 
 + (optional) 屏蔽更新提示
 ```nasm
@@ -83,12 +94,19 @@ host, gateway.icloud.com, iCloud
 
 ## Bilibili 港澳台内容
 
-+ 策略组
+### DNS 规则
+```nasm
+server = /*.hdslb.com/system
+server = /*.bilivideo.com/system
+server = /*.bilibili.com/system
+```
+
+### 策略组
 ```ini
 static=Bilibili, direct, HK, TW, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
 ```
 
-+ 本地分流规则
+### 本地分流规则
 ```nasm
 host, data.bilibili.com, direct
 host, mall.bilibili.com, direct
@@ -100,7 +118,7 @@ host-suffix, bilibili.com, Bilibili
 
 请用家宽落地节点解锁，可用代理链。
 
-+ 本地分流规则
+### 本地分流规则
 ```nasm
 host-suffix, instagram.com, TW_ISP, via-interface=%TUN%
 host-suffix, threads.com, TW_ISP, via-interface=%TUN%
@@ -115,27 +133,29 @@ host-suffix, cdninstagram.com, JP # 或者 proxy
 
 ## Web3
 
-+ 远程分流规则
+### 远程分流规则
 ```ini
 https://raw.githubusercontent.com/szkane/ClashRuleSet/main/Clash/Web3.list#via=0, tag=Web3, force-policy=TW_ISP, update-interval=172800, opt-parser=true, enabled=true
 ```
 
 ## 微信 / Weixin / WeChat 相关
 
-+ DNS 规则
+### DNS 规则
 ```nasm
 server = /*.wechat.com/system
 server = /*.weixin.com/system
 server = /*.weixin.qq.com/system
 server = /*.weixin.qq.com.cn/system
+server = /*.qpic.cn/system # 公众号
+server = /*.qlogo.cn/system # 公众号
 ```
 
-+ 策略组
+### 策略组
 ```ini
 static=WeChat, direct, HK, SG, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/WeChat.png
 ```
 
-+ 本地分流规则
+### 本地分流规则
 
 需搭配 `WeChat` 策略组，推荐 `🇭🇰HK` 或 `🇸🇬SG` 节点。
 
@@ -148,7 +168,7 @@ ip-asn, 132203, direct
 
 ## Adguard Desktop
 
-+ 本地分流规则
+### 本地分流规则
 ```nasm
 host, local.adguard.org, reject
 ```
