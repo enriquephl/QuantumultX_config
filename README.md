@@ -46,6 +46,7 @@ host, w3-reporting-nel.reddit.com, reject
 ; block pcdn trackers
 host, tp2p.kg.qq.com, reject
 host, sd-gl.xinqiucc.com, reject
+host, xpis-xcdn.youku.com, reject
 host, xpis-mob-xcdn.youku.com, reject
 ```
 
