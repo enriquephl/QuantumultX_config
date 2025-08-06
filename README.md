@@ -21,6 +21,11 @@
 
 ## 去广告、去追踪器
 
+### (optional) 远程覆写规则
+```ini
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet, tag=NoAdvertising, update-interval=172800, opt-parser=false, enabled=true
+```
+
 ### 远程分流规则
 ```ini
 https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf, tag=Privacy, force-policy=reject, inserted-resource=true, enabled=true
@@ -56,6 +61,14 @@ host, xpis-mob-xcdn.youku.com, reject
 ```ini
 static=LocationServices, direct, proxy, EU, HK, JP, SG, TW, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Find_My.png
 static=News, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
+```
+
+### (optional) 远程覆写规则
+```ini
+https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Location.snippet, tag=iRingoLocation, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/NSRingo/Siri/releases/latest/download/iRingo.Siri.snippet, tag=iRingoSiri, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/NSRingo/News/releases/latest/download/iRingo.News.snippet, tag=iRingoNews, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/NSRingo/TV/releases/latest/download/iRingo.TV.snippet, tag=iRingoTV, update-interval=172800, opt-parser=false, enabled=true
 ```
 
 ### 远程分流规则
