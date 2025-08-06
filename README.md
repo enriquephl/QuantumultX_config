@@ -153,7 +153,7 @@ host-suffix, cdninstagram.com, JP # 或者 proxy
 https://raw.githubusercontent.com/szkane/ClashRuleSet/main/Clash/Web3.list#via=0, tag=Web3, force-policy=TW_ISP, update-interval=172800, opt-parser=true, enabled=true
 ```
 
-## 微信 / Weixin / WeChat 相关
+## 微信 / Weixin / WeChat
 
 ### DNS 规则
 ```nasm
