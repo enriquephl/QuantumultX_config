@@ -28,31 +28,9 @@ https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/r
 
 ### 远程分流规则
 ```ini
+https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/NoMalwares.conf, tag=NoMalwares, force-policy=reject, inserted-resource=true, enabled=true
 https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/FuckRogueSoftwareRules.conf, tag=Privacy, force-policy=reject, inserted-resource=true, enabled=true
 https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/reject-no-drop.conf, tag=RejectNoDrop, force-policy=reject, opt-parser=true, enabled=true
-```
-
-### 本地分流规则
-
-~~给他们 PR 又不回，只好自己来~~
-
-```nasm
-; block line ads
-host, a.line.me, reject
-host, d.line-scdn.net, reject
-host, ad.line-scdn.net, reject
-host, linecrs.line-scdn.net, reject
-host, crs-event.line.me, reject
-host, crs-hometab-event.line.me, reject
-host, uts-front.line-apps.com, reject
-; reddit trackers
-host, w3-reporting.reddit.com, reject
-host, w3-reporting-nel.reddit.com, reject
-; block pcdn trackers
-host, tp2p.kg.qq.com, reject
-host, sd-gl.xinqiucc.com, reject
-host, xpis-xcdn.youku.com, reject
-host, xpis-mob-xcdn.youku.com, reject
 ```
 
 ## Apple 补完计画
