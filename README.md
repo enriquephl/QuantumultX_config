@@ -50,13 +50,19 @@ https://github.com/NSRingo/TV/releases/latest/download/iRingo.TV.snippet, tag=iR
 ```
 
 ### 远程分流规则
+```ini
+;https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/domainset/icloud_private_relay.conf, tag=iCloudPrivateRelay, force-policy=proxy, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/apple_cn.conf, tag=AppleCN, force-policy=direct, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/apple_cdn.conf, tag=AppleCDN, force-policy=direct, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/QuantumultX/Apple/AppleNoChinaCDNRules.conf, tag=AppleNoChinaCDN, force-policy=proxy, enabled=true
+https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/apple_services.conf, tag=AppleServices, force-policy=direct, opt-parser=true, enabled=true
 ```
-*iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)
-AppleCN 直连
-AppleCDN 直连
-AppleNoChinaCDN 代理
-AppleServices 直连
-```
+
+> *iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)
+> AppleCN 直连
+> AppleCDN 直连
+> AppleNoChinaCDN 代理
+> AppleServices 直连
 
 ### 本地分流规则
 
