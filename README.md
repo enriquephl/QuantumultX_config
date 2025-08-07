@@ -58,10 +58,10 @@ https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/Quan
 https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/apple_services.conf, tag=AppleServices, force-policy=direct, opt-parser=true, enabled=true
 ```
 
-> *iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)
-> AppleCN 直连
-> AppleCDN 直连
-> AppleNoChinaCDN 代理
+> *iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)   
+> AppleCN 直连   
+> AppleCDN 直连   
+> AppleNoChinaCDN 代理   
 > AppleServices 直连
 
 ### 本地分流规则
