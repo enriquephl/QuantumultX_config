@@ -150,7 +150,7 @@ host-suffix, cdninstagram.com, JP # 或者 proxy
 
 ### 远程分流规则
 ```ini
-https://raw.githubusercontent.com/szkane/ClashRuleSet/main/Clash/Web3.list#via=0, tag=Web3, force-policy=TW_ISP, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/ClashRuleSet/Clash/Web3.list#via=0, tag=Web3, force-policy=TW_ISP, update-interval=172800, opt-parser=true, enabled=true
 ```
 
 ## 微信 / Weixin / WeChat
