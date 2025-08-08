@@ -229,6 +229,7 @@ DOMAIN-SUFFIX,bitcoin.it
 DOMAIN-SUFFIX,bitcoinmagazine.com
 DOMAIN-SUFFIX,blockchain.com
 DOMAIN-SUFFIX,tronscan.org
+DOMAIN-SUFFIX,cointelegraph.com
 
 # > POOL
 DOMAIN-SUFFIX,btc.com
@@ -261,6 +262,7 @@ DOMAIN-SUFFIX,cryptoslam.io
 DOMAIN-SUFFIX,cryptoart.io
 DOMAIN-SUFFIX,nftcalendar.io
 DOMAIN-SUFFIX,nftgo.io
+DOMAIN-SUFFIX, sm.xyz
 
 # > IPFS
 DOMAIN-SUFFIX,filecoin.io
@@ -360,7 +362,6 @@ DOMAIN-SUFFIX, suiet.app
 DOMAIN-SUFFIX, suiscan.xyz
 DOMAIN-SUFFIX, suivision.xyz
 DOMAIN-SUFFIX, slush.app
-DOMAIN-SUFFIX, sm.xyz
 
 # >> Sui Protocols
 DOMAIN-SUFFIX, cetus.zone
