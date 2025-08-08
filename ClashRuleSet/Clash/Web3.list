@@ -262,7 +262,7 @@ DOMAIN-SUFFIX,cryptoslam.io
 DOMAIN-SUFFIX,cryptoart.io
 DOMAIN-SUFFIX,nftcalendar.io
 DOMAIN-SUFFIX,nftgo.io
-DOMAIN-SUFFIX, sm.xyz
+DOMAIN-SUFFIX,sm.xyz
 
 # > IPFS
 DOMAIN-SUFFIX,filecoin.io
@@ -352,19 +352,26 @@ DOMAIN-SUFFIX, ardrive.io
 DOMAIN-SUFFIX, arweave.net
 
 # > etc
-DOMAIN-SUFFIX, circle.com
-DOMAIN-SUFFIX, save.finance
+DOMAIN-SUFFIX,circle.com
+DOMAIN-SUFFIX,save.finance
+DOMAIN-SUFFIX,galxe.com
 
 # > Sui
-DOMAIN-SUFFIX, sui.io
-DOMAIN-SUFFIX, sui.rpcpool.com
-DOMAIN-SUFFIX, suiet.app
-DOMAIN-SUFFIX, suiscan.xyz
-DOMAIN-SUFFIX, suivision.xyz
-DOMAIN-SUFFIX, slush.app
+DOMAIN-SUFFIX,sui.io
+DOMAIN-SUFFIX,sui.rpcpool.com
+DOMAIN-SUFFIX,suiet.app
+DOMAIN-SUFFIX,suiscan.xyz
+DOMAIN-SUFFIX,suivision.xyz
+DOMAIN-SUFFIX,slush.app
+DOMAIN-SUFFIX,mystenlabs.com
 
 # >> Sui Protocols
-DOMAIN-SUFFIX, cetus.zone
-DOMAIN-SUFFIX, naviprotocol.io
-DOMAIN-SUFFIX, llama.fi
-DOMAIN-SUFFIX, suilend.fi
+DOMAIN-SUFFIX,cetus.zone
+DOMAIN-SUFFIX,naviprotocol.io
+DOMAIN-SUFFIX,llama.fi
+DOMAIN-SUFFIX,suilend.fi
+DOMAIN-SUFFIX,suins.io
+DOMAIN-SUFFIX,alphafi.xyz
+DOMAIN-SUFFIX,volo.fi
+DOMAIN-SUFFIX,volosui.com
+DOMAIN-SUFFIX,walrus.xyz
