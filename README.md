@@ -19,6 +19,15 @@
 + (optional) Apple 服务补完
 + (optional) [iRingo](https://nsringo.github.io/) 解锁 Apple News Siri **(由于 ios26 大量采用 [`countryd`](https://github.com/orgs/NSRingo/discussions/63)，建议[停留在 ios18](https://ai.id64.com/apple/zuzhi/index.html)以免不测)**
 
+
+## 架构
+### DNS 优化
+
+### 远程分流规则
+
+### 本地分流规则
+
+
 ## 去广告、去追踪器
 
 ### (optional) 远程覆写规则
@@ -77,6 +86,7 @@ host-suffix, cdn-apple.com, direct
 ```nasm
 host, xp.apple.com, reject
 host, gdmf.apple.com, reject
+host, mesu.apple.com, reject
 ```
 
 + (optional) 地区判定为外区 (需搭配对应的 `LocationServices` 策略组)
@@ -123,7 +133,6 @@ host-suffix, instagram.com, TW_ISP, via-interface=%TUN%
 host-suffix, threads.com, TW_ISP, via-interface=%TUN%
 host-suffix, threads.net, TW_ISP, via-interface=%TUN%
 host, web.facebook.com, TW_ISP, via-interface=%TUN%
-host, graph.facebook.com, TW_ISP, via-interface=%TUN%
 host, gateway.facebook.com, TW_ISP, via-interface=%TUN%
 ; cdn 对家宽无要求，可用高速大流量节点
 host-suffix, fbcdn.net, JP # 或者 proxy
@@ -188,4 +197,8 @@ https://t.me/technologyshare
 + [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)
 + [VirgilClyne/iRingo](https://github.com/VirgilClyne/iRingo)
 + [mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent)
++ [Silentely/AdBlock-Acceleration](https://github.com/Silentely/AdBlock-Acceleration)
++ [czghf/z11y22AD](https://github.com/czghf/z11y22AD)
++ [tomtoms/txt](https://github.com/tomtoms/txt)
++ [LittleRey/clash-yaml](https://github.com/LittleRey/clash-yaml)
 + https://www.rclogs.com/2024/05/telegram-dc-iprules

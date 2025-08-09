@@ -378,3 +378,6 @@ DOMAIN-SUFFIX,walrus.xyz
 
 # > Crypto.com
 DOMAIN-SUFFIX,crypto.com
+
+# > BitoPro
+DOMAIN-SUFFIX, bitopro.com
