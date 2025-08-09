@@ -250,4 +250,5 @@ https://t.me/technologyshare
 + [ppproxy/4surge](https://github.com/ppproxy/4surge)
 + [infinitytec/blocklists](https://github.com/infinitytec/blocklists)
 + [axtyet/Luminous](https://github.com/axtyet/Luminous)
++ [Lky777/MWCP](https://github.com/Lky777/MWCP)
 + https://www.rclogs.com/2024/05/telegram-dc-iprules
