@@ -24,6 +24,41 @@
 ### DNS 优化
 
 ### 远程分流规则
+```
+# 去追踪器和部分 app 广告
+NoMalwares REJECT → 补充规则
+Privacy REJECT → Elysian-Realme/FuGfConfig/FuckRogueSoftwareRules 规则，内含大部分常见软件的 httpdns、追踪、广告资源
+RejectNoDrop REJECT → Sukka 整理的 reject-no-drop 规则，内含大部分国产软件的 pcdn trackers
+# Apple 域名
+AppleIntelligence 代理 → Apple 官方文档提供的相关域名
+iCloudPrivateRelay 代理 → Sukka 整理的 IPR 规则
+AppleCN 直连 → Sukka 整理的云上贵州域名
+AppleCDN 直连 → Sukka 整理的苹果在中国有备案和 CDN 的域名
+AppleNoChinaCDN 代理 → Elysian-Realme 整理的苹果无法直连的域名
+AppleServices 直连 → Sukka 整理的苹果其他服务域名
+# 直连部分
+EmailDirect 策略 → 由于多数机场会封锁 SMTP，建议直连以免影响第三方客户端邮件发送
+SteamCN 直连 → blackmatrix7/SteamCN 规则
+MicrosoftCDN 直连 → Sukka 整理的微软在中国有备案和 CDN 的域名
+MicrosoftDirect 策略 → Elysian-Realme 整理的微软服务域名，直连效果看脸，需要直连微软服务的再用这个，其他情况不必启用
+OneDrive 直连 → blackmatrix7/OneDrive 规则
+Bilibili 策略 → 解锁 B 站港澳台资源用
+Wechat 策略
+Xiaohongshu 策略
+Domestic → Sukka 整理的大陆网站域名
+# Web3
+Web3 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
+# 流媒体与各种解锁
+UnbanAirport 解锁 → 机场审计不让你上的网站
+Line 策略 → 比微信还烂的聊天软件，对节点要求高
+AIPlatforms 解锁 → Sukka 整理的各大 LLM 平台域名
+InstagramUnblock 解锁 → 解锁 IG 版权音频
+MediaCDNExtra 策略 → 优化 CDN
+Spotify 代理 → Spotify 不需要特别解锁，放在前面修正流媒体解锁规则；blackmatrix7/Spotify 规则
+Youtube 策略 → blackmatrix7/YouTube 规则
+StreamingHK 解锁 → Sukka 整理的香港地区流媒体域名
+ForeignMedia 解锁 → sve1r 提供的流媒体域名列表
+```
 
 ### 本地分流规则
 
@@ -42,21 +77,13 @@ https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/Quan
 https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/reject-no-drop.conf, tag=RejectNoDrop, force-policy=reject, opt-parser=true, enabled=true
 ```
 
-## Apple 补完计画
+## Apple 域名
 
-### (optional) 策略组
-```ini
-static=LocationServices, direct, proxy, EU, HK, JP, SG, TW, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Find_My.png
-static=News, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
-```
-
-### (optional) 远程覆写规则
-```ini
-https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Location.snippet, tag=iRingoLocation, update-interval=172800, opt-parser=false, enabled=true
-https://github.com/NSRingo/Siri/releases/latest/download/iRingo.Siri.snippet, tag=iRingoSiri, update-interval=172800, opt-parser=false, enabled=true
-https://github.com/NSRingo/News/releases/latest/download/iRingo.News.snippet, tag=iRingoNews, update-interval=172800, opt-parser=false, enabled=true
-https://github.com/NSRingo/TV/releases/latest/download/iRingo.TV.snippet, tag=iRingoTV, update-interval=172800, opt-parser=false, enabled=true
-```
+> *iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)   
+> AppleCN 直连   
+> AppleCDN 直连   
+> AppleNoChinaCDN 代理   
+> AppleServices 直连
 
 ### 远程分流规则
 ```ini
@@ -67,39 +94,71 @@ https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/Quan
 https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/apple_services.conf, tag=AppleServices, force-policy=direct, opt-parser=true, enabled=true
 ```
 
-> *iCloudPrivateRelay 代理 (用 Apple TV 当软路由者适用)   
-> AppleCN 直连   
-> AppleCDN 直连   
-> AppleNoChinaCDN 代理   
-> AppleServices 直连
-
 ### 本地分流规则
-
 ```nasm
 host-suffix, cdn-apple.com, direct
-# 解锁非国行设备 apple intelligence 在国内使用，请用支持 ChatGPT 的节点。
-;host, apple-relay.apple.com, TW_ISP, via-interface=%TUN%
-;host, apple-relay.cloudflare.com, TW_ISP, via-interface=%TUN%
 ```
 
-+ (optional) 屏蔽更新提示
+## (optional) Apple 补完计画
+
+> 1. 解锁 Apple Intelligence   
+> 2. 解锁 Apple News、Siri 海外功能、罗盘经纬度等国际 iOS 特性   
+> 3. 使用代理连接 iCloud 闸道 (Gateway) 使 Apple 判断成外区用户，減少中国特征   
+> 4. 屏蔽更新提示
+
+### 策略组
+```ini
+static=iCloud, direct, HK, JP, SG, TW, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/iCloud.png
+static=LocationServices, direct, proxy, EU, HK, JP, SG, TW, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Find_My.png
+static=News, US, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
+```
+
+### 远程覆写规则
+```ini
+https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Location.snippet, tag=iRingoLocation, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/NSRingo/Siri/releases/latest/download/iRingo.Siri.snippet, tag=iRingoSiri, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/NSRingo/News/releases/latest/download/iRingo.News.snippet, tag=iRingoNews, update-interval=172800, opt-parser=false, enabled=true
+https://github.com/NSRingo/TV/releases/latest/download/iRingo.TV.snippet, tag=iRingoTV, update-interval=172800, opt-parser=false, enabled=true
+```
+需搭配 mitm 使用。
+
+### 远程分流规则
+```ini
+https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/snippets/AppleExtra.snippet, tag=AppleExtra, enabled=true
+; 用 chatgpt 节点解锁 apple intelligence
+https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/AppleIntelligence.conf#via=0, tag=AppleIntelligence, force-policy=TW_ISP, update-interval=172800, opt-parser=true, enabled=true
+```
+<details>
+
+<summary>原理</summary>
+
++ 屏蔽更新提示
 ```nasm
 host, xp.apple.com, reject
 host, gdmf.apple.com, reject
 host, mesu.apple.com, reject
 ```
 
-+ (optional) 地区判定为外区 (需搭配对应的 `LocationServices` 策略组)
++ 解锁非国行设备 apple intelligence 在国内使用，请用支持 ChatGPT 的节点。
 ```nasm
-host-suffix, ls.apple.com, LocationServices
+host, apple-relay.apple.com, TW_ISP, via-interface=%TUN%
+host, apple-relay.cloudflare.com, TW_ISP, via-interface=%TUN%
 ```
 
-+ (optional) iCloud Gateway (需搭配对应的 `iCloud` 策略组)
++ 地区判定为外区 (需搭配对应的 `LocationServices` 策略组)
+```nasm
+host-suffix, ls.apple.com, LocationServices
+host-suffix, gs-loc.apple.com, LocationServices
+```
+
++ iCloud Gateway (需搭配对应的 `iCloud` 策略组)
 ```nasm
 host, gateway.icloud.com, iCloud
 ```
-
 此规则仅影响 iCloud CDN 分配和 iCloud 同步，实际 iMessage / FaceTime 内容传输仍会直连。推荐使用 `🇭🇰HK / 🇯🇵JP / 🇸🇬SG / 🇹🇼TW` 节点或 `🇨🇳直连`，`🇨🇳直连／🇭🇰HK` 时会分配香港节点，其余会分配对应地区节点。用 `🇺🇸US` 节点会分配西雅图 CDN，此时 iCloud 同步会很慢，若不是要看 Apple News 不建议使用美国节点连接。
+
+</details>
+
 
 ## Bilibili 港澳台内容
 
@@ -115,28 +174,18 @@ server = /*.bilibili.com/system
 static=Bilibili, direct, HK, TW, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
 ```
 
-### 本地分流规则
-```nasm
-host, data.bilibili.com, direct
-host, mall.bilibili.com, direct
-host, api.vc.bilibili.com, direct
-host-suffix, bilibili.com, Bilibili
+### 远程分流规则
+```ini
+https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/snippets/Bilibili.snippet, tag=Bilibili, enabled=true
 ```
 
 ## 解锁 Instagram Licensed Audio
 
 请用家宽落地节点解锁，可用代理链。
 
-### 本地分流规则
-```nasm
-host-suffix, instagram.com, TW_ISP, via-interface=%TUN%
-host-suffix, threads.com, TW_ISP, via-interface=%TUN%
-host-suffix, threads.net, TW_ISP, via-interface=%TUN%
-host, web.facebook.com, TW_ISP, via-interface=%TUN%
-host, gateway.facebook.com, TW_ISP, via-interface=%TUN%
-; cdn 对家宽无要求，可用高速大流量节点
-host-suffix, fbcdn.net, JP # 或者 proxy
-host-suffix, cdninstagram.com, JP # 或者 proxy
+### 远程分流规则
+```ini
+https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/InstagramUnblock.conf#via=0, tag=InstagramUnblock, force-policy=TW_ISP, update-interval=172800, opt-parser=true, enabled=true
 ```
 
 ## Web3
@@ -163,15 +212,12 @@ server = /*.qlogo.cn/system # 公众号
 static=WeChat, direct, HK, SG, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/WeChat.png
 ```
 
-### 本地分流规则
+### 远程分流规则
 
 需搭配 `WeChat` 策略组，推荐 `🇭🇰HK` 或 `🇸🇬SG` 节点。
 
-```nasm
-host, dns.wechat.com, reject
-host, sgminorshort.wechat.com, proxy
-host-suffix, wechat.com, WeChat
-ip-asn, 132203, direct
+```ini
+https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/snippets/Wechat.snippet, tag=Wechat, enabled=true
 ```
 
 ## Adguard Desktop
@@ -180,7 +226,6 @@ ip-asn, 132203, direct
 ```nasm
 host, local.adguard.org, reject
 ```
-
 reject 会使 `local.adguard.org` 返回 127.0.0.1 正常运作。
 
 ## Telegram Group
