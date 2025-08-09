@@ -45,7 +45,7 @@ OneDrive 直连 → blackmatrix7/OneDrive 规则
 Bilibili 策略 → 解锁 B 站港澳台资源用
 Wechat 策略
 Xiaohongshu 策略
-Domestic → Sukka 整理的大陆网站域名
+Domestic 直连 → Sukka 整理的大陆网站域名
 # Web3
 Web3 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
 # 流媒体与各种解锁
