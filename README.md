@@ -246,4 +246,8 @@ https://t.me/technologyshare
 + [czghf/z11y22AD](https://github.com/czghf/z11y22AD)
 + [tomtoms/txt](https://github.com/tomtoms/txt)
 + [LittleRey/clash-yaml](https://github.com/LittleRey/clash-yaml)
++ [CLannadZSY/Quantumult_X](https://github.com/CLannadZSY/Quantumult_X)
++ [ppproxy/4surge](https://github.com/ppproxy/4surge)
++ [infinitytec/blocklists](https://github.com/infinitytec/blocklists)
++ [axtyet/Luminous](https://github.com/axtyet/Luminous)
 + https://www.rclogs.com/2024/05/telegram-dc-iprules
