@@ -251,4 +251,5 @@ https://t.me/technologyshare
 + [infinitytec/blocklists](https://github.com/infinitytec/blocklists)
 + [axtyet/Luminous](https://github.com/axtyet/Luminous)
 + [Lky777/MWCP](https://github.com/Lky777/MWCP)
++ [haixinn/loon](https://github.com/haixinn/loon)
 + https://www.rclogs.com/2024/05/telegram-dc-iprules
