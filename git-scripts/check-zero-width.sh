@@ -58,7 +58,7 @@ collect_changed_files() {
     --range)
       if [[ $# -ge 1 ]]; then
         if [[ "$1" == *..* ]]; then
-          mapfile -d '' CHANGED < <(git diff --name-only -z -- "$1")
+          mapfile -d '' CHANGED < <(git diff --name-only -z "$1")
         else
           range_a="${1:-HEAD~1}"; range_b="${2:-HEAD}"
           mapfile -d '' CHANGED < <(git diff --name-only -z -- "$range_a" "$range_b")
