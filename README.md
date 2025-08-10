@@ -6,7 +6,7 @@
 + Apple 域名优化、腾讯系优化
 + Wechat EU 优化
 + 拦截 PCDN ，优化国内体验
-+ 去追蹤器、去广告
++ 去追蹤器、去广告，打造干净互联网
 + 融合各家模版之长，去芜存菁
 + 适用 iPhone 、iPad 、Apple TV
 + Telegram 按 DC 地区分流
@@ -255,3 +255,4 @@ https://t.me/technologyshare
 + [qq5460168/Who520](https://github.com/qq5460168/Who520)
 + [celenityy/BadBlock](https://github.com/celenityy/BadBlock)
 + https://www.rclogs.com/2024/05/telegram-dc-iprules
++ https://github.com/hagezi/dns-blocklists/issues/6647
