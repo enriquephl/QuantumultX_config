@@ -1,0 +1,39 @@
+name: Check Zero-Width Characters
+on:
+  push:
+  pull_request:
+
+jobs:
+  zero-width-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine diff range
+        id: range
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "range=origin/${{ github.base_ref }}...HEAD" >> $GITHUB_OUTPUT
+          else
+            before="${{ github.event.before }}"
+            sha="${{ github.sha }}"
+            if [[ "$before" == "0000000000000000000000000000000000000000" ]]; then
+              echo "range=ALL" >> $GITHUB_OUTPUT
+            else
+              echo "range=${before}..${sha}" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Run zero-width character check
+        run: |
+          chmod +x git-scripts/check-zero-width.sh
+          if [[ "${{ steps.range.outputs.range }}" == "ALL" ]]; then
+            ./git-scripts/check-zero-width.sh --all
+          elif [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            git fetch origin "${{ github.base_ref }}:${{ github.base_ref }}"
+            ./git-scripts/check-zero-width.sh --range "${{ steps.range.outputs.range }}"
+          else
+            ./git-scripts/check-zero-width.sh --range "${{ steps.range.outputs.range }}"
+          fi

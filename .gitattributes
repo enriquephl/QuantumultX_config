@@ -1,0 +1,13 @@
+# 确保所有脚本在各平台都用 LF 换行
+git-scripts/* text eol=lf
+
+# 确保 GitHub Actions 工作流文件也是 LF
+.github/workflows/* text eol=lf
+
+# 其他文件的换行规则（可选）
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
