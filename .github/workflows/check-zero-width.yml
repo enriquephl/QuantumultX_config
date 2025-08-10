@@ -1,39 +1,87 @@
-name: Check Zero-Width Characters
+name: Zero-Width Characters Check
+
 on:
   push:
+    branches:
+      - "**"
   pull_request:
+    branches:
+      - "**"
+
+# 避免重复跑同一分支上的并发任务
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
-  zero-width-check:
+  check:
+    name: Scan for zero-width chars
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout (full history for correct diffs)
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      - name: Ensure checker exists & executable
+        run: |
+          if [ ! -f git-scripts/check-zero-width.sh ]; then
+            echo "Checker script not found: git-scripts/check-zero-width.sh"
+            exit 2
+          fi
+          chmod +x git-scripts/check-zero-width.sh
+
       - name: Determine diff range
         id: range
+        shell: bash
         run: |
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            echo "range=origin/${{ github.base_ref }}...HEAD" >> $GITHUB_OUTPUT
+          set -euo pipefail
+
+          # 默认扫描全部（用于新建分支首次 push）
+          RANGE_MODE="ALL"
+
+          if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
+            # PR：对 base...HEAD 做对比
+            echo "mode=PR" >> "$GITHUB_OUTPUT"
+            echo "range=origin/${{ github.base_ref }}...HEAD" >> "$GITHUB_OUTPUT"
           else
-            before="${{ github.event.before }}"
-            sha="${{ github.sha }}"
-            if [[ "$before" == "0000000000000000000000000000000000000000" ]]; then
-              echo "range=ALL" >> $GITHUB_OUTPUT
+            # push：用 before..sha；若 before 为全 0（新建分支），退化为 ALL
+            BEFORE="${{ github.event.before }}"
+            SHA="${{ github.sha }}"
+            if [[ "$BEFORE" != "0000000000000000000000000000000000000000" ]]; then
+              RANGE_MODE="RANGE"
+              echo "mode=PUSH_RANGE" >> "$GITHUB_OUTPUT"
+              echo "range=${BEFORE}..${SHA}" >> "$GITHUB_OUTPUT"
             else
-              echo "range=${before}..${sha}" >> $GITHUB_OUTPUT
+              echo "mode=PUSH_ALL" >> "$GITHUB_OUTPUT"
+              echo "range=ALL" >> "$GITHUB_OUTPUT"
             fi
           fi
 
-      - name: Run zero-width character check
+      - name: Fetch base for PR (shallow ref)
+        if: steps.range.outputs.mode == 'PR'
         run: |
-          chmod +x git-scripts/check-zero-width.sh
-          if [[ "${{ steps.range.outputs.range }}" == "ALL" ]]; then
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}:${{ github.base_ref }}"
+
+      - name: Run zero-width check
+        env:
+          # 可按需调整，单位字节：5 MiB
+          MAX_SIZE_BYTES: "5242880"
+        run: |
+          set -euo pipefail
+          mode="${{ steps.range.outputs.mode }}"
+          range="${{ steps.range.outputs.range }}"
+
+          echo "Mode: $mode"
+          echo "Range: $range"
+
+          if [[ "$range" == "ALL" ]]; then
             ./git-scripts/check-zero-width.sh --all
-          elif [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            git fetch origin "${{ github.base_ref }}:${{ github.base_ref }}"
-            ./git-scripts/check-zero-width.sh --range "${{ steps.range.outputs.range }}"
           else
-            ./git-scripts/check-zero-width.sh --range "${{ steps.range.outputs.range }}"
+            ./git-scripts/check-zero-width.sh --range "$range"
           fi
