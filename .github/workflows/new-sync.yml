@@ -30,7 +30,7 @@ jobs:
       
       - name: Make scripts executable
         run: chmod +x git-scripts/*.sh
-        shell: zsh
+        shell: bash
 
       # Set up Python environment for ECS scanning
       - name: Setup Python
@@ -80,7 +80,7 @@ jobs:
       
       - name: Make scripts executable
         run: chmod +x git-scripts/*.sh
-        shell: zsh
+        shell: bash
 
       # Synchronize IP rules from external sources to NoMalwares.conf
       - name: Sync IP rules
