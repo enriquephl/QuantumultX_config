@@ -269,3 +269,7 @@ https://t.me/technologyshare
 + [bigboyq/Surge](https://github.com/bigboyq/Surge)
 + https://github.com/hagezi/dns-blocklists/issues/6647
 + [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
++ [txthinking/brook](https://github.com/txthinking/brook)
++ [neoFelhz/neohosts](https://github.com/neoFelhz/neohosts)
++ [BlackJack8/iOSAdblockList](https://github.com/BlackJack8/iOSAdblockList)
++ [Kuroba-Sayuki/FuLing-AdRule](https://github.com/Kuroba-Sayuki/FuLing-AdRules)
