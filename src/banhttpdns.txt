@@ -1,2 +1,3 @@
 httpdns.bilivideo.com
 apppush-rts.xiaohongshu.com
+ams-httpdns.aliyuncs.com.gds.alibabadns.com
