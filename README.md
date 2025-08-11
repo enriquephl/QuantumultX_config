@@ -232,16 +232,27 @@ reject 会使 `local.adguard.org` 返回 127.0.0.1 正常运作。
 https://t.me/technologyshare
 
 ## Acknowledgement
-+ [SukkaW/Surge](https://github.com/SukkaW/Surge/)
-+ [Orz-3/QuantumultX](https://github.com/Orz-3/QuantumultX)
-+ [KOP-XIAO/QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
+
+### Icons
 + [Koolson/Qure](https://github.com/Koolson/Qure)
+
+
+### Scripts
++ [KOP-XIAO/QuantumultX](https://github.com/KOP-XIAO/QuantumultX)
++ [Orz-3/QuantumultX](https://github.com/Orz-3/QuantumultX)
++ [VirgilClyne/iRingo](https://github.com/VirgilClyne/iRingo)
++ [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)
++ [mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent)
+
+### Rulesets
++ [SukkaW/Surge](https://github.com/SukkaW/Surge/)
++ [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
 + [sve1r/Rules-For-Quantumult-X](https://github.com/sve1r/Rules-For-Quantumult-X)
 + [Elysian-Realme/FuGfConfig](https://github.com/Elysian-Realme/FuGfConfig)
 + [szkane/ClashRuleSet](https://github.com/szkane/ClashRuleSet)
-+ [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)
-+ [VirgilClyne/iRingo](https://github.com/VirgilClyne/iRingo)
-+ [mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent)
++ https://www.rclogs.com/2024/05/telegram-dc-iprules
+
+### Blocklists
 + [Silentely/AdBlock-Acceleration](https://github.com/Silentely/AdBlock-Acceleration)
 + [czghf/z11y22AD](https://github.com/czghf/z11y22AD)
 + [tomtoms/txt](https://github.com/tomtoms/txt)
@@ -254,5 +265,6 @@ https://t.me/technologyshare
 + [haixinn/loon](https://github.com/haixinn/loon)
 + [qq5460168/Who520](https://github.com/qq5460168/Who520)
 + [celenityy/BadBlock](https://github.com/celenityy/BadBlock)
-+ https://www.rclogs.com/2024/05/telegram-dc-iprules
++ [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists/issues/6647)
++ [bigboyq/Surge](https://github.com/bigboyq/Surge)
 + https://github.com/hagezi/dns-blocklists/issues/6647
