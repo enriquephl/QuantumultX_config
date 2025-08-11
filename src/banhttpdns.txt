@@ -4,3 +4,7 @@ gslb.xiaohongshu.com
 ams-httpdns.aliyuncs.com.gds.alibabadns.com
 resolvers-cn.httpdns.aliyuncs.com
 dypnsapi-dualstack.aliyuncs.com
+a.alipayobjects.com
+dns.alidns.com
+rec.xiaohongshu.com
+edith.xiaohongshu.com

@@ -268,3 +268,4 @@ https://t.me/technologyshare
 + [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists/issues/6647)
 + [bigboyq/Surge](https://github.com/bigboyq/Surge)
 + https://github.com/hagezi/dns-blocklists/issues/6647
++ [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
