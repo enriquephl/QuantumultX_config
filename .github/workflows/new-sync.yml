@@ -107,6 +107,9 @@ jobs:
             git add "$TARGET_FILE"
             msg_ts=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
             git commit -m "chore: update NoMalwares.conf: ${msg_ts}"
+            branch="${GITHUB_REF_NAME:-main}"
+            git fetch origin "$branch"
+            git rebase "origin/$branch" || { git rebase --abort; echo "::error::Rebase failed"; exit 1; }
             git push
           else
             echo "Nothing to commit."
