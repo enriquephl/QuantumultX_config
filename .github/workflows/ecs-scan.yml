@@ -1,4 +1,4 @@
-name: Build banhttpdns.conf (ECS scan)
+name: Build banhttpdns.conf
 
 on:
   workflow_dispatch: {}
