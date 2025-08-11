@@ -1,0 +1,90 @@
+name: Build banhttpdns.conf (ECS scan)
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Every day at 01:00 UTC == 09:00 UTC+8
+    - cron: "0 1 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run ECS scan (A+AAAA)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 helpers/ecs_scan_file.py src/banhttpdns.txt > /tmp/all_ips.txt
+
+      - name: Build banhttpdns.conf
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          outfile="ClashRuleSet/List/ip/banhttpdns.conf"
+          mkdir -p "$(dirname "$outfile")"
+
+          # 分离 IPv4 / IPv6 并去重
+          ipv4_file=/tmp/ipv4.txt
+          ipv6_file=/tmp/ipv6.txt
+          grep -E '^[0-9]+\.' /tmp/all_ips.txt | sort -u > "$ipv4_file" || true
+          grep -E ':'           /tmp/all_ips.txt | sort -u > "$ipv6_file" || true
+
+          cnt4=$(wc -l < "$ipv4_file" | tr -d ' ')
+          cnt6=$(wc -l < "$ipv6_file" | tr -d ' ')
+          total=$((cnt4 + cnt6))
+
+          # 时间戳（UTC，ISO8601，带毫秒）
+          ts=$(date -u +'%Y-%m-%dT%H:%M:%S.%3NZ')
+
+          # 仓库路径用于头部链接
+          repo="${GITHUB_REPOSITORY}"
+
+          {
+            echo "#########################################"
+            echo "# https://github.com/${repo}/main/ClashRuleSet/List/ip/banhttpdns.list"
+            echo "# Last Updated: ${ts}"
+            echo "# Size: ${total}"
+            echo "#  IP-CIDR: ${cnt4}"
+            echo "#  IP-CIDR6: ${cnt6}"
+            echo "#########################################"
+            # IPv4: IP-CIDR,<ipv4>
+            if [[ $cnt4 -gt 0 ]]; then
+              awk '{printf "IP-CIDR,%s\n", $0}' "$ipv4_file"
+            fi
+            # IPv6: IP-CIDR6,<ipv6>
+            if [[ $cnt6 -gt 0 ]]; then
+              awk '{printf "IP-CIDR6,%s\n", $0}' "$ipv6_file"
+            fi
+          } > "$outfile"
+
+          echo "Generated: $outfile"
+          echo "IPv4: $cnt4, IPv6: $cnt6, Total: $total"
+
+      - name: Commit and push
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if ! git diff --quiet -- ClashRuleSet/List/ip/banhttpdns.conf; then
+            msg_ts=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+            git add ClashRuleSet/List/ip/banhttpdns.conf
+            git commit -m "Update banhttpdns.conf: ${msg_ts}"
+            git push
+          else
+            echo "No changes to commit."
+          fi
