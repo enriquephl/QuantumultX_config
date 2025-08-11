@@ -53,7 +53,7 @@ jobs:
 
           {
             echo "#########################################"
-            echo "# https://github.com/${repo}/main/ClashRuleSet/List/ip/banhttpdns.list"
+            echo "# https://github.com/${repo}/blob/main/ClashRuleSet/List/ip/banhttpdns.list"
             echo "# Last Updated: ${ts}"
             echo "# Size: ${total}"
             echo "#  IP-CIDR: ${cnt4}"
@@ -61,11 +61,11 @@ jobs:
             echo "#########################################"
             # IPv4: IP-CIDR,<ipv4>
             if [[ $cnt4 -gt 0 ]]; then
-              awk '{printf "IP-CIDR,%s\n", $0}' "$ipv4_file"
+              awk '{printf "IP-CIDR,%s/32\n", $0}' "$ipv4_file"
             fi
             # IPv6: IP-CIDR6,<ipv6>
             if [[ $cnt6 -gt 0 ]]; then
-              awk '{printf "IP-CIDR6,%s\n", $0}' "$ipv6_file"
+              awk '{printf "IP-CIDR6,%s/128\n", $0}' "$ipv6_file"
             fi
           } > "$outfile"
 
