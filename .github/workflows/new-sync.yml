@@ -1,0 +1,113 @@
+name: Build banhttpdns.conf & Sync NoMalwares.conf
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Every day at 01:00 UTC == 09:00 UTC+8
+    - cron: "0 1 * * *"
+  push:
+    paths:
+      - 'src/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      BANHTTPDNS_PATH: ClashRuleSet/List/ip/banhttpdns.conf
+    # Check out the repository with full history
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Make scripts executable
+        run: chmod +x git-scripts/*.sh
+        shell: zsh
+
+      # Set up Python environment for ECS scanning
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Scan ECS records to generate IP list from src/banhttpdns.txt
+      - name: Run ECS scan (A+AAAA)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 helpers/ecs_scan_file.py src/banhttpdns.txt > /tmp/all_ips.txt || { echo "ECS scan failed"; exit 1; }
+
+      # Build banhttpdns.conf with formatted IPv4/IPv6 CIDR rules
+      - name: Build banhttpdns.conf
+        shell: bash
+        run: |
+          set -euo pipefail
+          ./git-scripts/build-banhttpdns.sh
+
+      # Commit and push changes to banhttpdns.conf if modified
+      - name: Commit and push
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if ! git diff --quiet -- "$BANHTTPDNS_PATH"; then
+            msg_ts=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+            git add "$BANHTTPDNS_PATH"
+            git commit -m "chore: update banhttpdns.conf: ${msg_ts}"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+  sync:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Make scripts executable
+        run: chmod +x git-scripts/*.sh
+        shell: zsh
+
+      # Synchronize IP rules from external sources to NoMalwares.conf
+      - name: Sync IP rules
+        shell: bash
+        env:
+          SRC_URLS: |
+            https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/refs/heads/master/List/ip/reject.conf
+            https://raw.githubusercontent.com/enriquephl/QuantumultX_config/refs/heads/main/ClashRuleSet/List/ip/banhttpdns.conf
+          TARGET_FILE: filters/NoMalwares.conf
+        run: |
+          set -euo pipefail
+          ./git-scripts/sync-nomalwares.sh
+
+      # Commit and push changes to NoMalwares.conf if modified
+      - name: Commit & push if changed
+        shell: bash
+        env:
+          TARGET_FILE: filters/NoMalwares.conf
+        run: |
+          set -euo pipefail
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "$TARGET_FILE"
+            msg_ts=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+            git commit -m "chore: update NoMalwares.conf: ${msg_ts}"
+            git push
+          else
+            echo "Nothing to commit."
+          fi
