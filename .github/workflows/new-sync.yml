@@ -27,10 +27,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
-      - name: Make scripts executable
-        run: chmod +x git-scripts/*.sh
-        shell: bash
 
       # Set up Python environment for ECS scanning
       - name: Setup Python
@@ -50,7 +46,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ./git-scripts/build-banhttpdns.sh
+          bash ./git-scripts/build-banhttpdns.sh
 
       # Commit and push changes to banhttpdns.conf if modified
       - name: Commit and push
@@ -77,10 +73,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
-      - name: Make scripts executable
-        run: chmod +x git-scripts/*.sh
-        shell: bash
 
       # Synchronize IP rules from external sources to NoMalwares.conf
       - name: Sync IP rules
@@ -92,7 +84,7 @@ jobs:
           TARGET_FILE: filters/NoMalwares.conf
         run: |
           set -euo pipefail
-          ./git-scripts/sync-nomalwares.sh
+          bash ./git-scripts/sync-nomalwares.sh
 
       # Commit and push changes to NoMalwares.conf if modified
       - name: Commit & push if changed
