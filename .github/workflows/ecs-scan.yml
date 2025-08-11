@@ -83,7 +83,7 @@ jobs:
           if ! git diff --quiet -- ClashRuleSet/List/ip/banhttpdns.conf; then
             msg_ts=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
             git add ClashRuleSet/List/ip/banhttpdns.conf
-            git commit -m "Update banhttpdns.conf: ${msg_ts}"
+            git commit -m "chore: update banhttpdns.conf: ${msg_ts}"
             git push
           else
             echo "No changes to commit."
