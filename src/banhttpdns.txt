@@ -14,3 +14,13 @@ zb-center-openacs.m.taobao.com.gds.alibabadns.com
 gaode-acs.m.taobao.com
 openacs.m.taobao.com
 zb-center-openacs.m.taobao.com
+guide-acs.m.taobao.com.gds.alibabadns.com
+trade-acs.m.taobao.com
+guide-acs.m.taobao.com
+acs.m.taobao.com
+h5api.m.taobao.com
+dualstack-na610-na620.acs.m.taobao.com.gds.alibabadns.com
+unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
+h5acs.m.taobao.com
+dns.weixin.qq.com
+dns.weixin.qq.com.cn
