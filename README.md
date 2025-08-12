@@ -29,13 +29,16 @@
 NoMalwares REJECT → 补充规则
 Privacy REJECT → Elysian-Realme/FuGfConfig/FuckRogueSoftwareRules 规则，内含大部分常见软件的 httpdns、追踪、广告资源
 RejectNoDrop REJECT → Sukka 整理的 reject-no-drop 规则，内含大部分国产软件的 pcdn trackers
+
 # Apple 域名
+AppleExtra 策略 → 见 "Apple 补完计画" 说明
 AppleIntelligence 代理 → Apple 官方文档提供的相关域名
 iCloudPrivateRelay 代理 → Sukka 整理的 IPR 规则
 AppleCN 直连 → Sukka 整理的云上贵州域名
 AppleCDN 直连 → Sukka 整理的苹果在中国有备案和 CDN 的域名
 AppleNoChinaCDN 代理 → Elysian-Realme 整理的苹果无法直连的域名
 AppleServices 直连 → Sukka 整理的苹果其他服务域名
+
 # 直连部分
 EmailDirect 策略 → 由于多数机场会封锁 SMTP，建议直连以免影响第三方客户端邮件发送
 SteamCN 直连 → blackmatrix7/SteamCN 规则
@@ -46,8 +49,10 @@ Bilibili 策略 → 解锁 B 站港澳台资源用
 Wechat 策略
 Xiaohongshu 策略
 Domestic 直连 → Sukka 整理的大陆网站域名
+
 # Web3
 Web3 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
+
 # 流媒体与各种解锁
 UnbanAirport 解锁 → 机场审计不让你上的网站
 Line 策略 → 比微信还烂的聊天软件，对节点要求高
@@ -58,6 +63,11 @@ Spotify 代理 → Spotify 不需要特别解锁，放在前面修正流媒体�
 Youtube 策略 → blackmatrix7/YouTube 规则
 StreamingHK 解锁 → Sukka 整理的香港地区流媒体域名
 ForeignMedia 解锁 → sve1r 提供的流媒体域名列表
+
+# 兜底
+FILTER_LAN 直连 → QX 内置的局域网规则
+FILTER_REGION 直连 → QX 内置的 geoip,cn 规则
+final 代理 → 本模版是国内白名单模式，需要将 final 设置为走代理
 ```
 
 ### 本地分流规则
@@ -153,6 +163,7 @@ host-suffix, gs-loc.apple.com, LocationServices
 
 + iCloud Gateway (需搭配对应的 `iCloud` 策略组)
 ```nasm
+host, iphone-ld.apple.com, iCloud
 host, gateway.icloud.com, iCloud
 ```
 此规则仅影响 iCloud CDN 分配和 iCloud 同步，实际 iMessage / FaceTime 内容传输仍会直连。推荐使用 `🇭🇰HK / 🇯🇵JP / 🇸🇬SG / 🇹🇼TW` 节点或 `🇨🇳直连`，`🇨🇳直连／🇭🇰HK` 时会分配香港节点，其余会分配对应地区节点。用 `🇺🇸US` 节点会分配西雅图 CDN，此时 iCloud 同步会很慢，若不是要看 Apple News 不建议使用美国节点连接。
@@ -231,7 +242,15 @@ reject 会使 `local.adguard.org` 返回 127.0.0.1 正常运作。
 ## Telegram Group
 https://t.me/technologyshare
 
-## Star
+## Star History
+
+<a href="https://www.star-history.com/#enriquephl/QuantumultX_config&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=enriquephl/QuantumultX_config&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=enriquephl/QuantumultX_config&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=enriquephl/QuantumultX_config&type=Date" />
+ </picture>
+</a>
 
 ## Acknowledgement
 
