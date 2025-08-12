@@ -24,3 +24,4 @@ unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
 h5acs.m.taobao.com
 dns.weixin.qq.com
 dns.weixin.qq.com.cn
+mediacloud.xiaohongshu.com
