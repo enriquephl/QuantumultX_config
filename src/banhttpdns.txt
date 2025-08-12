@@ -1,13 +1,11 @@
 httpdns.bilivideo.com
 apppush-rts.xiaohongshu.com
-rec.xiaohongshu.com
 gslb.xiaohongshu.com
-edith.xiaohongshu.com
+mediacloud.xiaohongshu.com
 ams-httpdns.aliyuncs.com.gds.alibabadns.com
 resolvers-cn.httpdns.aliyuncs.com
 dypnsapi-dualstack.aliyuncs.com
 a.alipayobjects.com
-dns.alidns.com
 youku-acs.m.taobao.com
 openacs4uc.m.taobao.com
 zb-center-openacs.m.taobao.com.gds.alibabadns.com
@@ -24,4 +22,3 @@ unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
 h5acs.m.taobao.com
 dns.weixin.qq.com
 dns.weixin.qq.com.cn
-mediacloud.xiaohongshu.com
