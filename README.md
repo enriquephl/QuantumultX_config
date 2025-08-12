@@ -231,6 +231,8 @@ reject 会使 `local.adguard.org` 返回 127.0.0.1 正常运作。
 ## Telegram Group
 https://t.me/technologyshare
 
+## Star
+
 ## Acknowledgement
 
 ### Icons
