@@ -3,8 +3,7 @@ name: Build banhttpdns.conf & Sync NoMalwares.conf
 on:
   workflow_dispatch: {}
   schedule:
-    # Every day at 01:00 UTC == 09:00 UTC+8
-    - cron: "0 1 * * *"
+    - cron: "6 */6 * * *" # Triggered every 6 hours
   push:
     paths:
       - 'src/**'
@@ -23,6 +22,10 @@ jobs:
       BANHTTPDNS_PATH: ClashRuleSet/List/ip/banhttpdns.conf
     # Check out the repository with full history
     steps:
+      - name: Add random delay (0-300 seconds)
+        if: github.event_name == 'schedule'
+        run: sleep $((RANDOM % 300))  # 随机等待 0~300 秒
+
       - name: Checkout repo
         uses: actions/checkout@v4
         with:

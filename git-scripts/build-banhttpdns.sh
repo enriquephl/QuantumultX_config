@@ -26,16 +26,12 @@ cnt4=$(wc -l < "$ipv4_file" | tr -d ' ')
 cnt6=$(wc -l < "$ipv6_file" | tr -d ' ')
 total=$((cnt4 + cnt6))
 
-# 时间戳（UTC，ISO8601）
-ts=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-
 # 仓库路径用于头部链接
 repo="${GITHUB_REPOSITORY}"
 
 {
   echo "#########################################"
   echo "# https://github.com/${repo}/blob/main/ClashRuleSet/List/ip/banhttpdns.list"
-  echo "# Last Updated: ${ts}"
   echo "# Size: ${total}"
   echo "#  IP-CIDR: ${cnt4}"
   echo "#  IP-CIDR6: ${cnt6}"
