@@ -166,6 +166,7 @@ host-suffix, gs-loc.apple.com, LocationServices
 ```nasm
 host, init.ess.apple.com, iCloud
 host, iphone-ld.apple.com, iCloud
+host, pancake.apple.com, iCloud
 host, gateway.icloud.com, iCloud
 host-suffix, ess.apple.com, proxy
 ```
