@@ -146,6 +146,7 @@ https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/filters/App
 ```nasm
 host, xp.apple.com, reject
 host, gdmf.apple.com, reject
+host, gdmf-ados.apple.com, reject
 host, mesu.apple.com, reject
 ```
 
