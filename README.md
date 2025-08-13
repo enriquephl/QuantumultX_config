@@ -163,8 +163,10 @@ host-suffix, gs-loc.apple.com, LocationServices
 
 + iCloud Gateway (需搭配对应的 `iCloud` 策略组)
 ```nasm
+host, init.ess.apple.com, iCloud
 host, iphone-ld.apple.com, iCloud
 host, gateway.icloud.com, iCloud
+host-suffix, ess.apple.com, proxy
 ```
 此规则仅影响 iCloud CDN 分配和 iCloud 同步，实际 iMessage / FaceTime 内容传输仍会直连。推荐使用 `🇭🇰HK / 🇯🇵JP / 🇸🇬SG / 🇹🇼TW` 节点或 `🇨🇳直连`，`🇨🇳直连／🇭🇰HK` 时会分配香港节点，其余会分配对应地区节点。用 `🇺🇸US` 节点会分配西雅图 CDN，此时 iCloud 同步会很慢，若不是要看 Apple News 不建议使用美国节点连接。
 
