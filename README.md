@@ -61,6 +61,8 @@ InstagramUnblock 解锁 → 解锁 IG 版权音频
 MediaCDNExtra 策略 → 优化 CDN
 Spotify 代理 → Spotify 不需要特别解锁，放在前面修正流媒体解锁规则；blackmatrix7/Spotify 规则
 Youtube 策略 → blackmatrix7/YouTube 规则
+GoogleAPIs 策略 → Google 全家桶，用 EEA/EU 节点可享有部份 GDPR 保护和更细致的数据控制选项。
+MetaAPIs 策略 → Facebook 和 Whatsapp 策略，可比照 GoogleAPIs。
 StreamingHK 解锁 → Sukka 整理的香港地区流媒体域名
 ForeignMedia 解锁 → sve1r 提供的流媒体域名列表
 
@@ -70,7 +72,11 @@ FILTER_REGION 直连 → QX 内置的 geoip,cn 规则
 final 代理 → 本模版是国内白名单模式，需要将 final 设置为走代理
 ```
 
-### 本地分流规则
+`策略`：指看具体情况和个人需求，决定走直连或特定节点/策略组。
+
+`解锁`：用解锁节点。
+
+`代理`：proxy。
 
 
 ## 去广告、去追踪器
