@@ -281,7 +281,7 @@ https://t.me/technologyshare
 + [szkane/ClashRuleSet](https://github.com/szkane/ClashRuleSet)
 + https://www.rclogs.com/2024/05/telegram-dc-iprules
 
-### Blocklists
+### Blocklists / Whitelists
 + [Silentely/AdBlock-Acceleration](https://github.com/Silentely/AdBlock-Acceleration)
 + [czghf/z11y22AD](https://github.com/czghf/z11y22AD)
 + [tomtoms/txt](https://github.com/tomtoms/txt)
@@ -302,3 +302,4 @@ https://t.me/technologyshare
 + [neoFelhz/neohosts](https://github.com/neoFelhz/neohosts)
 + [BlackJack8/iOSAdblockList](https://github.com/BlackJack8/iOSAdblockList)
 + [Kuroba-Sayuki/FuLing-AdRule](https://github.com/Kuroba-Sayuki/FuLing-AdRules)
++ [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
