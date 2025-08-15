@@ -296,10 +296,13 @@ https://t.me/technologyshare
 + [celenityy/BadBlock](https://github.com/celenityy/BadBlock)
 + [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists/issues/6647)
 + [bigboyq/Surge](https://github.com/bigboyq/Surge)
-+ https://github.com/hagezi/dns-blocklists/issues/6647
 + [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
 + [txthinking/brook](https://github.com/txthinking/brook)
 + [neoFelhz/neohosts](https://github.com/neoFelhz/neohosts)
 + [BlackJack8/iOSAdblockList](https://github.com/BlackJack8/iOSAdblockList)
 + [Kuroba-Sayuki/FuLing-AdRule](https://github.com/Kuroba-Sayuki/FuLing-AdRules)
 + [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
+
+### Discussions
++ https://github.com/hagezi/dns-blocklists/issues/6647
++ https://github.com/217heidai/adblockfilters/issues/50
