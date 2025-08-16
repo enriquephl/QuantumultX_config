@@ -25,6 +25,9 @@
 
 ### 远程分流规则
 ```
+# 修正补丁
+Whitelist → 修正被第三方规则误判的域名
+
 # 去追踪器和部分 app 广告
 NoMalwares REJECT → 补充规则
 Privacy REJECT → Elysian-Realme/FuGfConfig/FuckRogueSoftwareRules 规则，内含大部分常见软件的 httpdns、追踪、广告资源
@@ -198,6 +201,11 @@ static=Bilibili, direct, HK, TW, img-url=https://raw.githubusercontent.com/Kools
 https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/snippets/Bilibili.snippet, tag=Bilibili, enabled=true
 ```
 
+### 本地分流规则
+```nasm
+host, grpc.biliapi.net, Bilibili
+```
+
 ## 解锁 Instagram Licensed Audio
 
 请用家宽落地节点解锁，可用代理链。
@@ -303,6 +311,7 @@ https://t.me/technologyshare
 + [Kuroba-Sayuki/FuLing-AdRule](https://github.com/Kuroba-Sayuki/FuLing-AdRules)
 + [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
 + [mygfw/mygfw](https://github.com/mygfw/mygfw)
++ [badmojr/1Hosts](https://github.com/badmojr/1Hosts)
 
 ### Discussions
 + https://github.com/hagezi/dns-blocklists/issues/6647
