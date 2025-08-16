@@ -302,6 +302,7 @@ https://t.me/technologyshare
 + [BlackJack8/iOSAdblockList](https://github.com/BlackJack8/iOSAdblockList)
 + [Kuroba-Sayuki/FuLing-AdRule](https://github.com/Kuroba-Sayuki/FuLing-AdRules)
 + [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
++ [mygfw/mygfw](https://github.com/mygfw/mygfw)
 
 ### Discussions
 + https://github.com/hagezi/dns-blocklists/issues/6647
