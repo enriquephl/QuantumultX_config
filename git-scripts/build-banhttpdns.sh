@@ -31,7 +31,7 @@ repo="${GITHUB_REPOSITORY}"
 
 {
   echo "#########################################"
-  echo "# https://github.com/${repo}/blob/main/ClashRuleSet/List/ip/banhttpdns.list"
+  echo "# https://github.com/${repo}/blob/main/ClashRuleSet/List/ip/banhttpdns.conf"
   echo "# Size: ${total}"
   echo "#  IP-CIDR: ${cnt4}"
   echo "#  IP-CIDR6: ${cnt6}"
