@@ -5,7 +5,6 @@ youku-acs.m.taobao.com
 openacs4uc.m.taobao.com
 resolvers-cn.httpdns.aliyuncs.com
 ams-httpdns.aliyuncs.com.gds.alibabadns.com
-zb-center-openacs.m.taobao.com.gds.alibabadns.com
 guide-acs.m.taobao.com.gds.alibabadns.com
 unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
 dns.weixin.qq.com
