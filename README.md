@@ -66,6 +66,7 @@ Spotify PROXY → Spotify 不需要特别解锁，放在前面修正流媒体解
 Youtube 策略 → blackmatrix7/YouTube 规则
 GoogleAPIs 策略 → Google 全家桶，用 EEA/EU 节点可享有部份 GDPR 保护和更细致的数据控制选项。
 MetaAPIs 策略 → Facebook 和 Whatsapp 策略，可比照 GoogleAPIs。
+Nintendo 策略 → blackmatrix7/Nintendo 规则
 StreamingHK 解锁 → Sukka 整理的香港地区流媒体域名
 StreamingUS 解锁 → Sukka 整理的美国地区流媒体域名
 ForeignMedia 解锁 → sve1r 提供的流媒体域名列表
