@@ -380,3 +380,6 @@ DOMAIN-SUFFIX,crypto.com
 
 # > BitoPro
 DOMAIN-SUFFIX, bitopro.com
+
+# > RedotPay
+DOMAIN-SUFFIX, redotpay.com

@@ -1,6 +1,7 @@
 httpdns.bilivideo.com
 apppush-rts.xiaohongshu.com
 mediacloud.xiaohongshu.com
+amdc.m.taobao.com
 youku-acs.m.taobao.com
 openacs4uc.m.taobao.com
 resolvers-cn.httpdns.aliyuncs.com
