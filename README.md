@@ -43,42 +43,43 @@ AppleNoChinaCDN PROXY → Elysian-Realme 整理的苹果无法直连的域名
 AppleServices DIRECT → Sukka 整理的苹果其他服务域名
 
 # 直连部分
-EmailDirect 策略 → 由于多数机场会封锁 SMTP，建议直连以免影响第三方客户端邮件发送
+EmailDirect → 由于多数机场会封锁 SMTP，建议直连以免影响第三方客户端邮件发送
 SteamCN DIRECT → blackmatrix7/SteamCN 规则
 MicrosoftCDN DIRECT → Sukka 整理的微软在中国有备案和 CDN 的域名
 MicrosoftDirect 策略 → Elysian-Realme 整理的微软服务域名，直连效果看脸，需要直连微软服务的再用这个，其他情况不必启用
 OneDrive DIRECT → blackmatrix7/OneDrive 规则
 Bilibili 策略 → 解锁 B 站港澳台资源用
 Wechat 策略
-Xiaohongshu 策略
+Xiaohongshu
 Domestic DIRECT → Sukka 整理的大陆网站域名
 
 # Web3
 Web3 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
 
 # 流媒体与各种解锁
-UnbanAirport 解锁 → 机场审计不让你上的网站
+UnbanAirport 解锁 → 机场审计不让你上的网站、新发现的 LLM 域名
 Line 策略 → 比微信还烂的聊天软件，对节点要求高
 AIPlatforms 解锁 → Sukka 整理的各大 LLM 平台域名
 InstagramUnblock 解锁 → 解锁 IG 版权音频
-MediaCDNExtra 策略 → 优化 CDN
+MediaCDNExtra → 优化 CDN
 Spotify PROXY → Spotify 不需要特别解锁，放在前面修正流媒体解锁规则；blackmatrix7/Spotify 规则
 YouTubeCDNs 策略 → YouTube CDN 规则 (若要观看地区限定视频，需和 YouTube 设置为同区域节点)
 YouTube 策略 → blackmatrix7/YouTube 规则
 GoogleAPIs 策略 → Google 全家桶，用 EEA/EU 节点可享有部份 GDPR 保护和更细致的数据控制选项。
 MetaAPIs 策略 → Facebook 和 Whatsapp 策略，可比照 GoogleAPIs。
 Nintendo 策略 → blackmatrix7/Nintendo 规则
-StreamingHK 解锁 → Sukka 整理的香港地区流媒体域名
-StreamingUS 解锁 → Sukka 整理的美国地区流媒体域名
+StreamHK 解锁 → Sukka 整理的香港地区流媒体域名
+StreamTW 解锁 → Sukka 整理的台湾地区流媒体域名
+StreamUS 解锁 → Sukka 整理的美国地区流媒体域名
 ForeignMedia 解锁 → sve1r 提供的流媒体域名列表
 
 # 兜底
 FILTER_LAN DIRECT → QX 内置的局域网规则
 FILTER_REGION DIRECT → QX 内置的 geoip,cn 规则
-final DIRECT → 本模版是国内白名单模式，需要将 final 设置为走代理
+final PROXY → 白名单模式
 ```
 
-`策略`：指看具体情况和个人需求，决定走直连或特定节点/策略组。
+`策略`：指看具体情况和个人需求，决定走直连或特定节点 / 策略组。
 
 `解锁`：用解锁节点。
 
