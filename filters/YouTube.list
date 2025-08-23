@@ -1,0 +1,7 @@
+HOST, youtubei.googleapis.com, YouTube
+HOST, yt3.ggpht.com, YouTube
+HOST, yt3.googleusercontent.com, YouTube
+HOST-SUFFIX, ytimg.com, YouTube
+HOST-SUFFIX, ggpht.com, YouTube
+HOST-SUFFIX, googlevideo.com, YouTube
+HOST-SUFFIX, youtube.com, YouTube
