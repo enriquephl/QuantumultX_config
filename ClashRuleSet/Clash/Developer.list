@@ -1,0 +1,42 @@
+## modified from https://github.com/szkane/ClashRuleSet/blob/main/Clash/Ruleset/Developer.list
+
+# images
+DOMAIN-KEYWORD,registry
+DOMAIN-SUFFIX,apache.org
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,elastic.co
+DOMAIN-SUFFIX,elastic.com
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,jitpack.io
+DOMAIN-SUFFIX,maven.org
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,mvnrepository.com
+DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redhat.com
+DOMAIN-SUFFIX,sonatype.org
+DOMAIN-SUFFIX,sourcegraph.com
+DOMAIN-SUFFIX,spring.io
+DOMAIN-SUFFIX,spring.net
+DOMAIN-SUFFIX,stackoverflow.com
+DOMAIN-SUFFIX,registry.gitlab.com
+DOMAIN-SUFFIX,mcr.microsoft.com
+
+# huggingface
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
+DOMAIN-KEYWORD,huggingface
+
+# LM studio
+DOMAIN-SUFFIX,lmstudio.ai
+
+# draw things
+DOMAIN-SUFFIX,static.libnnc.org
+
+# OrbStack Helper
+PROCESS-NAME,OrbStack
+PROCESS-NAME,OrbStack Helper

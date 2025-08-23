@@ -1,3 +1,5 @@
+## modified from https://github.com/szkane/ClashRuleSet/blob/main/Clash/Web3.list
+
 # airdrop project
 DOMAIN-SUFFIX,abs.xyz
 DOMAIN-SUFFIX,nexus.xyz
