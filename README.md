@@ -283,6 +283,7 @@ https://t.me/technologyshare
 + [Orz-3/QuantumultX](https://github.com/Orz-3/QuantumultX)
 + [VirgilClyne/iRingo](https://github.com/VirgilClyne/iRingo)
 + [fmz200/wool_scripts](https://github.com/fmz200/wool_scripts)
++ [Moli-X/Resources](https://github.com/Moli-X/Resources)
 + [mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent)
 
 ### Rulesets
@@ -316,6 +317,10 @@ https://t.me/technologyshare
 + [ShadowWhisperer/BlockLists](https://github.com/ShadowWhisperer/BlockLists)
 + [mygfw/mygfw](https://github.com/mygfw/mygfw)
 + [badmojr/1Hosts](https://github.com/badmojr/1Hosts)
++ [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters)
++ [jhsvip/ADRuls](https://github.com/jhsvip/ADRuls)
++ [QingRex/LoonKissSurge](https://github.com/QingRex/LoonKissSurge)
++ [MajkiIT/polish-ads-filter](https://github.com/MajkiIT/polish-ads-filter)
 
 ### Discussions
 + https://github.com/hagezi/dns-blocklists/issues/6647
