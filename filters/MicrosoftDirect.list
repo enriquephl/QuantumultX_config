@@ -1,0 +1,14 @@
+HOST, api.appcenter.ms, MicrosoftDirect
+HOST, assets.msn.com, MicrosoftDirect
+HOST, r.bing.com, MicrosoftDirect
+HOST, th.bing.com, MicrosoftDirect
+HOST, thfvnext.bing.com, MicrosoftDirect
+HOST, m.hotmail.com, MicrosoftDirect
+HOST, login.microsoftonline.com, MicrosoftDirect
+HOST, outlook.office365.com, MicrosoftDirect
+HOST, client.wns.windows.com, MicrosoftDirect
+HOST, time.windows.com, MicrosoftDirect
+HOST, oneocsp.microsoft.com, MicrosoftDirect
+HOST, edge-http.microsoft.com, MicrosoftDirect
+HOST-SUFFIX, edge.microsoft.com, MicrosoftDirect
+HOST-SUFFIX, onedrive.com, MicrosoftDirect

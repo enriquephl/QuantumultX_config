@@ -46,7 +46,6 @@ AppleServices DIRECT → Sukka 整理的苹果其他服务域名
 EmailDirect → 由于多数机场会封锁 SMTP，建议直连以免影响第三方客户端邮件发送
 SteamCN DIRECT → blackmatrix7/SteamCN 规则
 MicrosoftCDN DIRECT → Sukka 整理的微软在中国有备案和 CDN 的域名
-MicrosoftDirect 策略 → Elysian-Realme 整理的微软服务域名，直连效果看脸，需要直连微软服务的再用这个，其他情况不必启用
 OneDrive DIRECT → blackmatrix7/OneDrive 规则
 Bilibili 策略 → 解锁 B 站港澳台资源用
 Wechat 策略
