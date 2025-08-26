@@ -3,7 +3,7 @@ name: Build banhttpdns.conf & Sync NoMalwaresPlus.conf
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "6 */18 * * *" # Triggered every 6 hours
+    - cron: "6 */18 * * *" # Triggered every 18 hours
   push:
     paths:
       - 'src/**'
@@ -77,14 +77,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Synchronize IP rules from external sources to NoMalwaresPlus.conf
+      # Synchronize IP rules from external sources to NoMalwaresPlus.list
       - name: Sync IP rules
         shell: bash
         env:
           SRC_URLS: |
             https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/refs/heads/master/List/ip/reject.conf
             https://raw.githubusercontent.com/enriquephl/QuantumultX_config/refs/heads/main/ClashRuleSet/List/ip/banhttpdns.conf
-          TARGET_FILE: filters/NoMalwaresPlus.conf
+          TARGET_FILE: filters/NoMalwaresPlus.list
         run: |
           set -euo pipefail
           bash ./git-scripts/sync-nomalwares.sh
@@ -93,7 +93,7 @@ jobs:
       - name: Commit & push if changed
         shell: bash
         env:
-          TARGET_FILE: filters/NoMalwaresPlus.conf
+          TARGET_FILE: filters/NoMalwaresPlus.list
         run: |
           set -euo pipefail
           if [[ -n "$(git status --porcelain)" ]]; then
@@ -101,7 +101,7 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add "$TARGET_FILE"
             msg_ts=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
-            git commit -m "chore: update NoMalwaresPlus.conf: ${msg_ts}"
+            git commit -m "chore: update NoMalwaresPlus.list: ${msg_ts}"
             branch="${GITHUB_REF_NAME:-main}"
             git fetch origin "$branch"
             git rebase "origin/$branch" || { git rebase --abort; echo "::error::Rebase failed"; exit 1; }
