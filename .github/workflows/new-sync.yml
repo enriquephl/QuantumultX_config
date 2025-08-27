@@ -1,4 +1,4 @@
-name: Build banhttpdns.conf & Sync NoMalwaresPlus.conf
+name: Build banhttpdns.conf & Sync NoMalwaresPlus.list
 
 on:
   workflow_dispatch: {}
