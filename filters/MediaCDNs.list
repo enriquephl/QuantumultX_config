@@ -21,3 +21,7 @@ HOST, lh4.googleusercontent.com, MediaCDNs
 HOST, lh5.googleusercontent.com, MediaCDNs
 HOST, upos-hz-mirrorakam.akamaized.net, MediaCDNs
 HOST-SUFFIX, redditstatic.com, MediaCDNs
+HOST-SUFFIX, twitchcdn.net, MediaCDNs
+HOST-SUFFIX, twitchsvc.net, MediaCDNs
+HOST-SUFFIX, nflximg.com, MediaCDNs
+HOST-SUFFIX, nflximg.net, MediaCDNs
