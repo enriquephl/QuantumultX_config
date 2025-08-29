@@ -29,17 +29,17 @@
 Whitelist → 修正被第三方规则误判的域名
 
 # 去追踪器和部分 app 广告
-NoMalwares REJECT → 补充规则
+NoMalwares REJECT → 补充规则 (不带 IP 规则: NoMalwares; 带 IP 规则: NoMalwarePlus)
 Privacy REJECT → Elysian-Realme/FuGfConfig/FuckRogueSoftwareRules 规则，内含大部分常见软件的 httpdns、追踪、广告资源
 RejectNoDrop REJECT → Sukka 整理的 reject-no-drop 规则，内含大部分国产软件的 pcdn trackers
 
 # Apple 域名
-AppleExtra 策略 → 见 "Apple 补完计画" 说明
-AppleIntelligence 解锁 → Apple 官方文档提供的相关域名
-iCloudPrivateRelay PROXY → Sukka 整理的 IPR 规则
+AppleExtra* 策略 → 见 "Apple 补完计画" 说明
+AppleIntelligence* 解锁 → Apple 官方文档提供的相关域名
+iCloudPrivateRelay* PROXY → Sukka 整理的 IPR 规则
 AppleCN DIRECT → Sukka 整理的云上贵州域名
 AppleCDN DIRECT → Sukka 整理的苹果在中国有备案和 CDN 的域名
-AppleNoChinaCDN PROXY → Elysian-Realme 整理的苹果无法直连的域名
+AppleNoChinaCDN* PROXY → Elysian-Realme 整理的苹果无法直连的域名
 AppleServices DIRECT → Sukka 整理的苹果其他服务域名
 
 # 直连部分
@@ -48,36 +48,39 @@ SteamCN DIRECT → blackmatrix7/SteamCN 规则
 MicrosoftCDN DIRECT → Sukka 整理的微软在中国有备案和 CDN 的域名
 OneDrive DIRECT → blackmatrix7/OneDrive 规则
 Bilibili 策略 → 解锁 B 站港澳台资源用
-Wechat 策略
-Xiaohongshu
+Wechat* 策略
+Xiaohongshu*
 Domestic DIRECT → Sukka 整理的大陆网站域名
 
 # Web3
-Web3 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
+Web3* 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
 
 # 流媒体与各种解锁
 UnbanAirport 解锁 → 机场审计不让你上的网站、新发现的 LLM 域名
-Line 策略 → 比微信还烂的聊天软件，对节点要求高
+Line* 策略 → 比微信还烂的聊天软件，对节点要求高
 AIPlatforms 解锁 → Sukka 整理的各大 LLM 平台域名
 InstagramUnblock 解锁 → 解锁 IG 版权音频
+MediaCDNs* PROXY → 无 IP 限制的 CDN 资源们
 MediaCDNExtra → 优化 CDN
 Spotify PROXY → Spotify 不需要特别解锁，放在前面修正流媒体解锁规则；blackmatrix7/Spotify 规则
-YouTubeCDNs 策略 → YouTube CDN 规则 (若要观看地区限定视频，需和 YouTube 设置为同区域节点)
+YouTubeCDNs* 策略 → YouTube CDN 规则 (若要观看地区限定视频，需和 YouTube 设置为同区域节点)
 YouTube 策略 → YouTube 规则
-GoogleAPIs 策略 → Google 全家桶，用 EEA/EU 节点可享有部份 GDPR 保护和更细致的数据控制选项。
-MetaAPIs 策略 → Facebook 和 Whatsapp 策略，可比照 GoogleAPIs。
-Nintendo 策略 → blackmatrix7/Nintendo 规则
-StreamHK 解锁 → Sukka 整理的香港地区流媒体域名
-StreamJP 解锁 → Sukka 整理的日本地区流媒体域名
-StreamTW 解锁 → Sukka 整理的台湾地区流媒体域名
-StreamUS 解锁 → Sukka 整理的美国地区流媒体域名
-ForeignMedia 解锁 → Sukka 整理的流媒体域名列表
+GoogleAPIs* 策略 → Google 全家桶，用 EEA/EU 节点可享有部份 GDPR 保护和更细致的数据控制选项。
+MetaAPIs* 策略 → Facebook 和 Whatsapp 策略，可比照 GoogleAPIs。
+Nintendo* 策略 → blackmatrix7/Nintendo 规则
+StreamHK* 解锁 → Sukka 整理的香港地区流媒体域名
+StreamJP* 解锁 → Sukka 整理的日本地区流媒体域名
+StreamTW* 解锁 → Sukka 整理的台湾地区流媒体域名
+StreamUS* 解锁 → Sukka 整理的美国地区流媒体域名
+ForeignMedia* 解锁 → Sukka 整理的流媒体域名列表
 
 # 兜底
 FILTER_LAN DIRECT → QX 内置的局域网规则
 FILTER_REGION DIRECT → QX 内置的 geoip,cn 规则
 final PROXY → 白名单模式
 ```
+
+`*`: 可选项，非必要
 
 `策略`：指看具体情况和个人需求，决定走直连或特定节点 / 策略组。
 
@@ -320,6 +323,7 @@ https://t.me/technologyshare
 + [jhsvip/ADRuls](https://github.com/jhsvip/ADRuls)
 + [QingRex/LoonKissSurge](https://github.com/QingRex/LoonKissSurge)
 + [MajkiIT/polish-ads-filter](https://github.com/MajkiIT/polish-ads-filter)
++ [zxsman/Rules](https://github.com/zxsman/Rules)
 
 ### Discussions
 + https://github.com/hagezi/dns-blocklists/issues/6647
