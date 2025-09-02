@@ -232,6 +232,12 @@ DOMAIN-SUFFIX,blockchain.com
 DOMAIN-SUFFIX,tronscan.org
 DOMAIN-SUFFIX,cointelegraph.com
 
+# >> Analysis APIs
+DOMAIN-SUFFIX,cmcap.io
+DOMAIN-SUFFIX,saasexch.com
+DOMAIN-SUFFIX,saasexch.info
+DOMAIN-SUFFIX,commonservice.io
+
 # > POOL
 DOMAIN-SUFFIX,btc.com
 DOMAIN-SUFFIX,f2pool.com
@@ -341,7 +347,7 @@ DOMAIN-SUFFIX,ably.io
 # > XAl.space
 DOMAIN-SUFFIX,XAl.space
 
-# > SOL domain 
+# > SOL domain
 DOMAIN-SUFFIX,sns.id
 DOMAIN-SUFFIX,airdrop.sns.id
 
