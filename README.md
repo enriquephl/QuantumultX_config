@@ -57,7 +57,6 @@ Web3* 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
 
 # 流媒体与各种解锁
 UnbanAirport 解锁 → 机场审计不让你上的网站、新发现的 LLM 域名
-Line* 策略 → 比微信还烂的聊天软件，对节点要求高
 AIPlatforms 解锁 → Sukka 整理的各大 LLM 平台域名
 InstagramUnblock 解锁 → 解锁 IG 版权音频
 MediaCDNs* PROXY → 无 IP 限制的 CDN 资源们
