@@ -9,8 +9,8 @@ HOST-SUFFIX, fbsbx.com, MediaCDNs
 HOST-SUFFIX, cdninstagram.com, MediaCDNs
 HOST, ab.chatgpt.com, MediaCDNs
 HOST, ws.chatgpt.com, MediaCDNs
-HOST, cdn.oaistatic.com, MediaCDNs
 HOST-SUFFIX, oaistatic.com, MediaCDNs
+HOST-SUFFIX, line-scdn.net, MediaCDNs
 HOST-SUFFIX, twimg.com, MediaCDNs
 HOST-SUFFIX, ytimg.com, MediaCDNs
 HOST, yt3.ggpht.com, MediaCDNs
