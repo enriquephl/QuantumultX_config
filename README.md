@@ -1,7 +1,7 @@
 # QuantumultX_config
 **Make Quantumult X Great Again!!!**
 
-+ 最小化规则树，減少内存占用 (不到一万条规则，和其他模版动辄三五万条相比大幅精简)
++ 最小化规则树，減少内存占用 (不到一万条规则)
 + 优先 DoQ / DoH ，防运营商作妖
 + Apple 域名优化、腾讯系优化
 + Wechat EU 优化
@@ -49,7 +49,6 @@ MicrosoftCDN DIRECT → Sukka 整理的微软在中国有备案和 CDN 的域名
 OneDrive DIRECT → blackmatrix7/OneDrive 规则
 Bilibili 策略 → 解锁 B 站港澳台资源用
 Wechat* 策略
-Xiaohongshu*
 Domestic DIRECT → Sukka 整理的大陆网站域名
 
 # Web3
@@ -59,7 +58,6 @@ Web3* 解锁 → forked from szkane/ClashRuleSet; modified by enriquephl
 UnbanAirport 解锁 → 机场审计不让你上的网站、新发现的 LLM 域名
 AIPlatforms 解锁 → Sukka 整理的各大 LLM 平台域名
 InstagramUnblock 解锁 → 解锁 IG 版权音频
-MediaCDNs* PROXY → 无 IP 限制的 CDN 资源们
 MediaCDNExtra → 优化 CDN
 Spotify PROXY → Spotify 不需要特别解锁，放在前面修正流媒体解锁规则；blackmatrix7/Spotify 规则
 YouTubeCDNs* 策略 → YouTube CDN 规则 (若要观看地区限定视频，需和 YouTube 设置为同区域节点)
@@ -251,27 +249,6 @@ static=WeChat, direct, HK, SG, img-url=https://raw.githubusercontent.com/Koolson
 ```ini
 https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/snippets/Wechat.snippet, tag=Wechat, enabled=true
 ```
-
-## Adguard Desktop
-
-### 本地分流规则
-```nasm
-host, local.adguard.org, reject
-```
-reject 会使 `local.adguard.org` 返回 127.0.0.1 正常运作。
-
-## Telegram Group
-https://t.me/technologyshare
-
-## Star History
-
-<a href="https://www.star-history.com/#enriquephl/QuantumultX_config&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=enriquephl/QuantumultX_config&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=enriquephl/QuantumultX_config&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=enriquephl/QuantumultX_config&type=Date" />
- </picture>
-</a>
 
 ## Acknowledgement
 
