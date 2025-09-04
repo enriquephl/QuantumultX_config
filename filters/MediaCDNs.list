@@ -7,6 +7,7 @@ HOST-SUFFIX, cdn.whatsapp.net, MediaCDNs
 HOST-SUFFIX, fbcdn.net, MediaCDNs
 HOST-SUFFIX, fbsbx.com, MediaCDNs
 HOST-SUFFIX, cdninstagram.com, MediaCDNs
+HOST-SUFFIX, cdn.nintendo.net, MediaCDNs
 HOST, ab.chatgpt.com, MediaCDNs
 HOST, ws.chatgpt.com, MediaCDNs
 HOST-SUFFIX, oaistatic.com, MediaCDNs
