@@ -11,4 +11,5 @@ HOST, time.windows.com, MicrosoftDirect
 HOST, oneocsp.microsoft.com, MicrosoftDirect
 HOST, edge-http.microsoft.com, MicrosoftDirect
 HOST-SUFFIX, edge.microsoft.com, MicrosoftDirect
+HOST-SUFFIX, teams.microsoft.com, MicrosoftDirect
 HOST-SUFFIX, onedrive.com, MicrosoftDirect
