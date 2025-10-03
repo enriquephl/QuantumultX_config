@@ -3,7 +3,7 @@ name: Build banhttpdns.conf & Sync NoMalwaresPlus.list
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "6 */36 * * *" # Triggered every 36 hours
+    - cron: "14 15 */3 * *" # Triggered every 3 days at 15:14 UTC
   push:
     paths:
       - 'src/**'
