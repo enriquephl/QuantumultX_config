@@ -1,10 +1,16 @@
 host, cn.bing.com, reject
 host-suffix, linkedin.cn, reject
+ip6-cidr, ::/128, reject
+ip6-cidr, ::1/128, direct
+ip6-cidr, fc00::/7, direct
+ip6-cidr, fe80::/10, direct
+ip6-cidr, ::/0, JP
 host, lh3.googleusercontent.com, JP
 host, lh4.googleusercontent.com, JP
 host, lh5.googleusercontent.com, JP
 host, yt3.googleusercontent.com, JP
 host-suffix, github.io, JP
+host-suffix, jsdelivr.net, JP
 host-suffix, teams.microsoft.com, JP
 host-suffix, redditstatic.com, JP
 host-suffix, cdn.nintendo.net, JP
@@ -51,6 +57,7 @@ host, ab.chatgpt.com, HK
 host, ws.chatgpt.com, HK
 host, avatars.githubusercontent.com, HK
 host-suffix, githubassets.com, HK
+host, cdnjs.cloudflare.com, HK
 host, api.suiet.app, TW
 host, wallet.okx.com, TW
 host-suffix, api.cx.metamask.io, TW
@@ -66,10 +73,13 @@ host, sora.chatgpt.com, US
 host-suffix, office.com, US
 host-suffix, officecdn.microsoft.com, US
 host-suffix, ghcr.io, US
+host-suffix, registry.npmjs.org, US
+host-suffix, nodejs.org, US
 host-suffix, gitlab.com, US
 host-suffix, linkedin.com, US
 host-suffix, coingtelegraph.com, US
 host, scontent.cdninstagram.com, US
+host-suffix, pornhub.com, US
 host, graph.facebook.com, EU
 host, imap.gmail.com, EU
 host, xai.chronosphere.io, EU
@@ -78,3 +88,4 @@ host-suffix, bing.com, EU
 host-suffix, msn.com, EU
 host-suffix, twitter.com, EU
 host-suffix, x.com, EU
+host-suffix, medium.com, EU
