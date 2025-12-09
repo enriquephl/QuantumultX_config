@@ -299,6 +299,7 @@ https://raw.githubusercontent.com/enriquephl/QuantumultX_config/main/snippets/We
 + [QingRex/LoonKissSurge](https://github.com/QingRex/LoonKissSurge)
 + [MajkiIT/polish-ads-filter](https://github.com/MajkiIT/polish-ads-filter)
 + [zxsman/Rules](https://github.com/zxsman/Rules)
++ [Cats-Team/AdRules](https://github.com/Cats-Team/AdRules)
 
 ### Discussions
 + https://github.com/hagezi/dns-blocklists/issues/6647
