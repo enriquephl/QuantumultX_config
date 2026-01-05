@@ -1,9 +1,13 @@
+# Prvent redirection to China domains
 host-suffix, linkedin.cn, reject
+# IPv6 local addresses
 ip6-cidr, ::/128, reject
 ip6-cidr, ::1/128, direct
 ip6-cidr, fc00::/7, direct
 ip6-cidr, fe80::/10, direct
+# IPv6 catch-all
 ip6-cidr, ::/0, JP
+# Content CDNs (large), Nintendo
 host, lh3.googleusercontent.com, JP
 host, lh4.googleusercontent.com, JP
 host, lh5.googleusercontent.com, JP
@@ -20,6 +24,7 @@ host-suffix, ggpht.com, JP
 host-suffix, phncdn.com, JP
 host-suffix, twimg.com, JP
 host-suffix, ytimg.com, JP
+# Static CDNs (small), fast response apis, Chinese apis and Chinese oversea CDNs
 host, abs.twimg.com, HK
 host, abs-0.twimg.com, HK
 host, abs-1.twimg.com, HK
@@ -56,6 +61,7 @@ host, ws.chatgpt.com, HK
 host, avatars.githubusercontent.com, HK
 host-suffix, githubassets.com, HK
 host, cdnjs.cloudflare.com, HK
+# Cryptocurrencies, LINE, Taiwanese CDNs
 host, api.suiet.app, TW
 host, wallet.okx.com, TW
 host-suffix, api.cx.metamask.io, TW
@@ -64,7 +70,7 @@ host-suffix, phantom.app, TW
 host-suffix, line.me, TW
 host-suffix, line-scdn.net, TW
 host-wildcard, aka*p.akamaized.net, TW
-host, web.facebook.com, TW
+# Object storages, Chinese apis and Chinese oversea CDNs
 host, mobilemaps.googleapis.com, SG
 host, fe.xiaohongshu.com, SG
 host, referee.xiaohongshu.com, SG
@@ -75,6 +81,7 @@ host-suffix, fastly.jsdelivr.net, SG
 host-suffix, larksuite.com, SG
 host-suffix, cloudflaremirrors.com, SG
 host-suffix, content-storage-upload.googleapis.com, SG
+# Developer, Download, US based services
 host, api.x.com, US
 host, api.twitter.com, US
 host, api.github.com, US
@@ -89,8 +96,8 @@ host-suffix, unpkg.com, US
 host-suffix, gitlab.com, US
 host-suffix, linkedin.com, US
 host-suffix, coingtelegraph.com, US
-host, scontent.cdninstagram.com, US
 host-suffix, pornhub.com, US
+# GDPR purpose
 host, graph.facebook.com, EU
 host, imap.gmail.com, EU
 host-suffix, gemini.google, EU
