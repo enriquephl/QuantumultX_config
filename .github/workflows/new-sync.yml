@@ -84,6 +84,7 @@ jobs:
           SRC_URLS: |
             https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/refs/heads/master/List/ip/reject.conf
             https://raw.githubusercontent.com/enriquephl/QuantumultX_config/refs/heads/main/ClashRuleSet/List/ip/banhttpdns.conf
+          META_FILE: filters/NoMalwares.conf
           TARGET_FILE: filters/NoMalwaresPlus.list
         run: |
           set -euo pipefail
