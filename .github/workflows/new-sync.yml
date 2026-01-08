@@ -6,7 +6,8 @@ on:
     - cron: "14 15 */3 * *" # Triggered every 3 days at 15:14 UTC
   push:
     paths:
-      - 'src/**'
+      - "src/**"
+      - "filters/NoMalwares.conf"
 
 permissions:
   contents: write
