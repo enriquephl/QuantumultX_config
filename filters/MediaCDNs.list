@@ -14,12 +14,7 @@ HOST-SUFFIX, oaistatic.com, MediaCDNs
 HOST-SUFFIX, line-scdn.net, MediaCDNs
 HOST-SUFFIX, twimg.com, MediaCDNs
 HOST-SUFFIX, ytimg.com, MediaCDNs
-HOST, yt3.ggpht.com, MediaCDNs
-HOST, yt3.googleusercontent.com, MediaCDNs
 HOST-SUFFIX, ggpht.com, MediaCDNs
-HOST, lh3.googleusercontent.com, MediaCDNs
-HOST, lh4.googleusercontent.com, MediaCDNs
-HOST, lh5.googleusercontent.com, MediaCDNs
 HOST, upos-hz-mirrorakam.akamaized.net, MediaCDNs
 HOST-SUFFIX, redditstatic.com, MediaCDNs
 HOST-SUFFIX, twitchcdn.net, MediaCDNs
