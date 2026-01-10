@@ -1,0 +1,35 @@
+# Source 0: https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
+# Source 1: https://github.com/Elysian-Realme/FuGfConfig/blob/main/ConfigFile/DataFile/Apple/no-cn-cdn-domain.txt
+## Apple Non-China CDN
+## Trailer
+HOST, hls.itunes.apple.com, AppleNoChinaCDN
+## Movie Stream
+HOST, hls-amt.itunes.apple.com, AppleNoChinaCDN
+## iTunes Music Stream
+HOST, audio-ssl.itunes.apple.com, AppleNoChinaCDN
+HOST, cdn.apple-cloudkit.com, AppleNoChinaCDN
+## Developer
+HOST, devimages-cdn.apple.com, AppleNoChinaCDN
+HOST, devstreaming-cdn.apple.com, AppleNoChinaCDN
+HOST, js-cdn.music.apple.com, AppleNoChinaCDN
+HOST, docs-assets.developer.apple.com, AppleNoChinaCDN
+## Apple TV
+HOST, np-edge.itunes.apple.com, AppleNoChinaCDN
+HOST, play-edge.itunes.apple.com, AppleNoChinaCDN
+HOST-SUFFIX, tv.apple.com, AppleNoChinaCDN
+HOST, tv.applemusic.com, AppleNoChinaCDN
+USER-AGENT, AppleTV*, AppleNoChinaCDN
+USER-AGENT, com.apple.tv*, AppleNoChinaCDN
+HOST, uts-api.itunes.apple.com, AppleNoChinaCDN
+## OCSP
+HOST-SUFFIX, ocsp.apple.com, AppleNoChinaCDN
+USER-AGENT, com.apple.trustd*, AppleNoChinaCDN
+## Apple Proxy
+HOST, developer.apple.com, AppleNoChinaCDN
+HOST-SUFFIX, digicert.com, AppleNoChinaCDN
+HOST, testflight.apple.com, AppleNoChinaCDN
+HOST, sandbox.itunes.apple.com, AppleNoChinaCDN
+HOST-SUFFIX, blobstore.apple.com, AppleNoChinaCDN
+HOST, cvws.icloud-content.com, AppleNoChinaCDN
+## FitnessPlus
+HOST, hls-svod.itunes.apple.com, AppleNoChinaCDN
