@@ -11,3 +11,6 @@ git-scripts/* text eol=lf
 *.py text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+*.conf text eol=lf
+*.json text eol=lf
+*.md text eol=lf

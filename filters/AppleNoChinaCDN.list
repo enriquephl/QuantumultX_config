@@ -8,6 +8,7 @@ HOST, hls-amt.itunes.apple.com, AppleNoChinaCDN
 ## iTunes Music Stream
 HOST, audio-ssl.itunes.apple.com, AppleNoChinaCDN
 HOST, cdn.apple-cloudkit.com, AppleNoChinaCDN
+HOST-SUFFIX, cdn-apple.com, AppleNoChinaCDN
 ## Developer
 HOST, devimages-cdn.apple.com, AppleNoChinaCDN
 HOST, devstreaming-cdn.apple.com, AppleNoChinaCDN
