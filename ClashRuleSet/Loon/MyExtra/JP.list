@@ -1,0 +1,19 @@
+# Content CDNs (large), Japan-only services
+DOMAIN, lh3.googleusercontent.com
+DOMAIN, lh4.googleusercontent.com
+DOMAIN, lh5.googleusercontent.com
+DOMAIN-SUFFIX, github.io
+DOMAIN-SUFFIX, cloudfront.net
+DOMAIN-SUFFIX, teams.microsoft.com
+DOMAIN-SUFFIX, redditstatic.com
+DOMAIN-SUFFIX, cdn.nintendo.net
+DOMAIN-SUFFIX, fna.fbcdn.net
+DOMAIN-SUFFIX, cdninstagram.com
+DOMAIN-SUFFIX, ggpht.com
+DOMAIN-SUFFIX, imgur.com
+DOMAIN-SUFFIX, phncdn.com
+DOMAIN-SUFFIX, twimg.com
+DOMAIN-SUFFIX, patreonusercontent.com
+DOMAIN-SUFFIX, famipay.family.co.jp
+DOMAIN-SUFFIX, toyota-finance.co.jp
+DOMAIN-SUFFIX, paycierge.com

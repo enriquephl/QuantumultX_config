@@ -1,0 +1,4 @@
+host, smtp.gmail.com, DIRECT
+host, m.hotmail.com, DIRECT
+host, login.microsoftonline.com, DIRECT
+host, outlook.office365.com, DIRECT

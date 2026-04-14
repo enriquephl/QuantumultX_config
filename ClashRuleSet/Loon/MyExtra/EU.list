@@ -1,0 +1,23 @@
+# GDPR purpose
+DOMAIN, graph.facebook.com
+DOMAIN, imap.gmail.com
+DOMAIN-SUFFIX, gemini.google
+DOMAIN-SUFFIX, gemini.google.com
+DOMAIN, aisandbox-pa.googleapis.com
+DOMAIN, proactivebackend-pa.googleapis.com
+DOMAIN, robinfrontend-pa.googleapis.com
+DOMAIN-SUFFIX, notebooklm.google
+DOMAIN-SUFFIX, notebooklm.google.com
+DOMAIN, cloudcode-pa.googleapis.com
+DOMAIN, antigravity.google
+DOMAIN, antigravity-unleash.goog
+DOMAIN, daily-cloudcode-pa.googleapis.com
+DOMAIN-SUFFIX, googleadservices.com
+DOMAIN-SUFFIX, bing.com
+DOMAIN-SUFFIX, live.com
+DOMAIN-SUFFIX, microsoft.com
+DOMAIN-SUFFIX, msn.com
+DOMAIN-SUFFIX, t.co
+DOMAIN-SUFFIX, twitter.com
+DOMAIN-SUFFIX, x.com
+DOMAIN-SUFFIX, medium.com

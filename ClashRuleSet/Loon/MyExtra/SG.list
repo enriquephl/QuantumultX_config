@@ -1,0 +1,10 @@
+# Object storages, Chinese apis and Chinese oversea CDNs
+DOMAIN, mobilemaps.googleapis.com
+DOMAIN-SUFFIX, amazonaws.com
+DOMAIN-SUFFIX, fastly.net
+DOMAIN-SUFFIX, fastly.jsdelivr.net
+DOMAIN-SUFFIX, larksuite.com
+DOMAIN-SUFFIX, tplinknbu.com
+DOMAIN-SUFFIX, cloudflaremirrors.com
+DOMAIN-SUFFIX, content-storage-upload.googleapis.com
+DOMAIN-SUFFIX, pornhub.com

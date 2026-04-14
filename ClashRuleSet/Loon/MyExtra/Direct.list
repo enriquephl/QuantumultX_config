@@ -1,0 +1,27 @@
+DOMAIN, smtp.gmail.com
+DOMAIN, m.hotmail.com
+DOMAIN, login.microsoftonline.com
+DOMAIN, outlook.office365.com
+DOMAIN-SUFFIX, scdn.co
+DOMAIN-SUFFIX, spotifycdn.com
+DOMAIN-SUFFIX, tplinkcloud.com
+DOMAIN-SUFFIX, larksuitecdn.com
+DOMAIN-SUFFIX, dl.google.com
+IP-ASN, 38631, no-resolve
+DOMAIN, fonts.googleapis.com
+DOMAIN, assets.msn.com
+DOMAIN, r.bing.com
+DOMAIN, th.bing.com
+DOMAIN, thf.bing.com
+DOMAIN, thfvnext.bing.com
+DOMAIN, r.msftstatic.com
+DOMAIN, api.appcenter.ms
+DOMAIN, client.wns.windows.com
+DOMAIN, time.windows.com
+DOMAIN, ntp.msn.com
+DOMAIN-SUFFIX, msftconnecttest.com
+DOMAIN, detectportal.firefox.com
+DOMAIN, o.pki.goog
+DOMAIN, captive.apple.com
+DOMAIN-SUFFIX, pool.ntp.org
+DOMAIN-SUFFIX, taiwanmobile.com

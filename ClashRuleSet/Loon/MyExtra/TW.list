@@ -1,0 +1,9 @@
+# Cryptocurrencies, LINE, Taiwanese CDNs
+DOMAIN, api.suiet.app
+DOMAIN, wallet.okx.com
+DOMAIN-SUFFIX, api.cx.metamask.io
+DOMAIN-SUFFIX, coinmarketcap.com
+DOMAIN-SUFFIX, phantom.app
+DOMAIN-SUFFIX, line.me
+DOMAIN-SUFFIX, line-scdn.net
+DOMAIN-SUFFIX, crunchyroll.com
