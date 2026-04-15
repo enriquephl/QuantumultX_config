@@ -2,7 +2,6 @@
 DOMAIN, mobilemaps.googleapis.com
 DOMAIN-SUFFIX, amazonaws.com
 DOMAIN-SUFFIX, fastly.net
-DOMAIN-SUFFIX, fastly.jsdelivr.net
 DOMAIN-SUFFIX, larksuite.com
 DOMAIN-SUFFIX, tplinknbu.com
 DOMAIN-SUFFIX, cloudflaremirrors.com

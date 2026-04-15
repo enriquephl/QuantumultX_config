@@ -3,6 +3,7 @@ DOMAIN, lh3.googleusercontent.com
 DOMAIN, lh4.googleusercontent.com
 DOMAIN, lh5.googleusercontent.com
 DOMAIN-SUFFIX, github.io
+DOMAIN-SUFFIX, jsdelivr.net
 DOMAIN-SUFFIX, cloudfront.net
 DOMAIN-SUFFIX, teams.microsoft.com
 DOMAIN-SUFFIX, redditstatic.com
