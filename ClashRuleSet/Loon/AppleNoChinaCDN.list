@@ -8,7 +8,6 @@ DOMAIN, hls-amt.itunes.apple.com
 ## iTunes Music Stream
 DOMAIN, audio-ssl.itunes.apple.com
 DOMAIN, cdn.apple-cloudkit.com
-DOMAIN-SUFFIX, cdn-apple.com
 ## Developer
 DOMAIN, devimages-cdn.apple.com
 DOMAIN, devstreaming-cdn.apple.com
