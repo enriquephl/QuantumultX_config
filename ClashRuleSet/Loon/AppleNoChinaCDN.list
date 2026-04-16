@@ -1,0 +1,36 @@
+# Source 0: https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
+# Source 1: https://github.com/Elysian-Realme/FuGfConfig/blob/main/ConfigFile/DataFile/Apple/no-cn-cdn-domain.txt
+## Apple Non-China CDN
+## Trailer
+DOMAIN, hls.itunes.apple.com
+## Movie Stream
+DOMAIN, hls-amt.itunes.apple.com
+## iTunes Music Stream
+DOMAIN, audio-ssl.itunes.apple.com
+DOMAIN, cdn.apple-cloudkit.com
+DOMAIN-SUFFIX, cdn-apple.com
+## Developer
+DOMAIN, devimages-cdn.apple.com
+DOMAIN, devstreaming-cdn.apple.com
+DOMAIN, js-cdn.music.apple.com
+DOMAIN, docs-assets.developer.apple.com
+## Apple TV
+DOMAIN, np-edge.itunes.apple.com
+DOMAIN, play-edge.itunes.apple.com
+DOMAIN-SUFFIX, tv.apple.com
+DOMAIN, tv.applemusic.com
+USER-AGENT, AppleTV*
+USER-AGENT, com.apple.tv*
+DOMAIN, uts-api.itunes.apple.com
+## OCSP
+DOMAIN-SUFFIX, ocsp.apple.com
+USER-AGENT, com.apple.trustd*
+## Apple Proxy
+DOMAIN, developer.apple.com
+DOMAIN-SUFFIX, digicert.com
+DOMAIN, testflight.apple.com
+DOMAIN, sandbox.itunes.apple.com
+DOMAIN-SUFFIX, blobstore.apple.com
+DOMAIN, cvws.icloud-content.com
+## FitnessPlus
+DOMAIN, hls-svod.itunes.apple.com
