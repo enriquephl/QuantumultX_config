@@ -16,3 +16,4 @@ DOMAIN-SUFFIX, patreonusercontent.com
 DOMAIN-SUFFIX, famipay.family.co.jp
 DOMAIN-SUFFIX, toyota-finance.co.jp
 DOMAIN-SUFFIX, paycierge.com
+IP-CIDR6, ::/0
