@@ -7,7 +7,6 @@ DOMAIN-SUFFIX, spotifycdn.com
 DOMAIN-SUFFIX, tplinkcloud.com
 DOMAIN-SUFFIX, larksuitecdn.com
 DOMAIN-SUFFIX, dl.google.com
-IP-ASN, 38631, no-resolve
 DOMAIN, fonts.googleapis.com
 DOMAIN, assets.msn.com
 DOMAIN, r.bing.com
@@ -25,3 +24,9 @@ DOMAIN, o.pki.goog
 DOMAIN, captive.apple.com
 DOMAIN-SUFFIX, pool.ntp.org
 DOMAIN-SUFFIX, taiwanmobile.com
+# LINE
+IP-ASN, 38631, no-resolve
+# WeChat
+IP-ASN, 132203, no-resolve
+# Apple
+IP-ASN, 714, no-resolve
