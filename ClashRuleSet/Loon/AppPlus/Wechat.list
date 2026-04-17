@@ -1,7 +1,8 @@
+DOMAIN, sgshort.wechat.com
+DOMAIN, sglong.wechat.com
+DOMAIN, sgminorshort.wechat.com
 DOMAIN, hkshort.weixin.qq.com
 DOMAIN, hklong.weixin.qq.com
 DOMAIN, hkminorshort.weixin.qq.com
-DOMAIN, sgshort.wechat.com
-DOMAIN, sgminorshort.wechat.com
-DOMAIN-SUFFIX, wechat.com
-IP-ASN, 132203, no-resolve
+AND, ((IP-ASN, 139341, no-resolve), (PROTOCOL,TCP))
+AND, ((IP-ASN, 132203, no-resolve), (PROTOCOL,TCP))

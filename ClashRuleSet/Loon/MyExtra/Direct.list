@@ -26,7 +26,5 @@ DOMAIN-SUFFIX, pool.ntp.org
 DOMAIN-SUFFIX, taiwanmobile.com
 # LINE
 IP-ASN, 38631, no-resolve
-# WeChat
-IP-ASN, 132203, no-resolve
 # Apple
 IP-ASN, 714, no-resolve
