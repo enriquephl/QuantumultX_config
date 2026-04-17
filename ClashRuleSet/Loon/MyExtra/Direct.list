@@ -24,6 +24,8 @@ DOMAIN, o.pki.goog
 DOMAIN, captive.apple.com
 DOMAIN-SUFFIX, pool.ntp.org
 DOMAIN-SUFFIX, taiwanmobile.com
+DOMAIN, adashx.m.taobao.com
+DOMAIN, gm.mmstat.com
 # LINE
 IP-ASN, 38631, no-resolve
 # Apple
