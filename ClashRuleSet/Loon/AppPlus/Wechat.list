@@ -6,3 +6,5 @@ DOMAIN, hklong.weixin.qq.com
 DOMAIN, hkminorshort.weixin.qq.com
 AND, ((IP-ASN, 139341, no-resolve), (PROTOCOL,TCP))
 AND, ((IP-ASN, 132203, no-resolve), (PROTOCOL,TCP))
+URL-REGEX, ^http://sgshort\.wechat\.com/mmtls/
+URL-REGEX, ^http://sgminorshort\.wechat\.com/mmtls/

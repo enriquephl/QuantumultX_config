@@ -26,6 +26,8 @@ DOMAIN-SUFFIX, pool.ntp.org
 DOMAIN-SUFFIX, taiwanmobile.com
 DOMAIN, adashx.m.taobao.com
 DOMAIN, gm.mmstat.com
+DOMAIN-SUFFIX, alipay.hk
+DOMAIN-SUFFIX, macaupass.com
 # LINE
 IP-ASN, 38631, no-resolve
 # Apple
