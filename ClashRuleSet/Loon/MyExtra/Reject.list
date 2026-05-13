@@ -1,1 +1,2 @@
 DOMAIN-SUFFIX, linkedin.cn
+AND, ((IP-ASN, 714), (PROTOCOL, QUIC))
