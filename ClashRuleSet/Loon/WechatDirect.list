@@ -4,5 +4,5 @@ DOMAIN, sgshort.pay.wechat.com
 DOMAIN, sgshort.mixpay.wechat.com
 DOMAIN, tencentmap.wechat.com
 DOMAIN-SUFFIX, c2c.wechat.com
-AND, ((IP-ASN, 139341, no-resolve), (PROTOCOL,UDP))
+IP-ASN, 139341, no-resolve
 IP-ASN, 132203, no-resolve

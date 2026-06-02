@@ -5,8 +5,6 @@ ip6-cidr, ::/128, reject
 ip6-cidr, ::1/128, direct
 ip6-cidr, fc00::/7, direct
 ip6-cidr, fe80::/10, direct
-# IPv6 catch-all
-ip6-cidr, ::/0, JP
 # Content CDNs (large), Japan-only services
 host, lh3.googleusercontent.com, JP
 host, lh4.googleusercontent.com, JP
@@ -71,7 +69,9 @@ host-suffix, line.me, TW
 host-suffix, line-scdn.net, TW
 host-wildcard, aka*p.akamaized.net, TW
 host-suffix, crunchyroll.com, TW
+host-suffix, hanime1.me, TW
 # Object storages, Chinese apis and Chinese oversea CDNs
+host, api.github.com, SG
 host, mobilemaps.googleapis.com, SG
 host-suffix, amazonaws.com, SG
 host-suffix, fastly.net, SG
@@ -83,7 +83,6 @@ host-suffix, pornhub.com, SG
 # Developer, Download, US based services
 host, api.x.com, US
 host, api.twitter.com, US
-host, api.github.com, US
 host-suffix, office.com, US
 host-suffix, officecdn.microsoft.com, US
 host, copilot.microsoft.com, US
@@ -91,7 +90,9 @@ host-suffix, storage.googleapis.com, US
 host-suffix, ghcr.io, US
 host-suffix, registry.npmjs.org, US
 host-suffix, nodejs.org, US
+host-suffix, npmjs.com, US
 host-suffix, unpkg.com, US
+host-suffix, github.com, US
 host-suffix, gitlab.com, US
 host-suffix, linkedin.com, US
 host-suffix, coingtelegraph.com, US

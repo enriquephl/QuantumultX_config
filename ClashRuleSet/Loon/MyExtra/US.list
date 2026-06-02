@@ -1,7 +1,6 @@
 # Developer, Download, US based services
 DOMAIN, api.x.com
 DOMAIN, api.twitter.com
-DOMAIN, api.github.com
 DOMAIN-SUFFIX, office.com
 DOMAIN-SUFFIX, officecdn.microsoft.com
 DOMAIN, copilot.microsoft.com
@@ -9,7 +8,9 @@ DOMAIN-SUFFIX, storage.googleapis.com
 DOMAIN-SUFFIX, ghcr.io
 DOMAIN-SUFFIX, registry.npmjs.org
 DOMAIN-SUFFIX, nodejs.org
+DOMAIN-SUFFIX, npmjs.com
 DOMAIN-SUFFIX, unpkg.com
+DOMAIN-SUFFIX, github.com
 DOMAIN-SUFFIX, gitlab.com
 DOMAIN-SUFFIX, linkedin.com
 DOMAIN-SUFFIX, coingtelegraph.com

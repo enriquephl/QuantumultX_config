@@ -1,4 +1,5 @@
 # Object storages, Chinese apis and Chinese oversea CDNs
+DOMAIN, api.github.com
 DOMAIN, mobilemaps.googleapis.com
 DOMAIN-SUFFIX, amazonaws.com
 DOMAIN-SUFFIX, fastly.net
