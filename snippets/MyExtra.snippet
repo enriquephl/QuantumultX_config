@@ -1,10 +1,5 @@
 # Prvent redirection to China domains
 host-suffix, linkedin.cn, reject
-# IPv6 local addresses
-ip6-cidr, ::/128, reject
-ip6-cidr, ::1/128, direct
-ip6-cidr, fc00::/7, direct
-ip6-cidr, fe80::/10, direct
 # Content CDNs (large), Japan-only services
 host, lh3.googleusercontent.com, JP
 host, lh4.googleusercontent.com, JP
@@ -28,6 +23,7 @@ host-suffix, paycierge.com, JP
 host-suffix, paypay-corp.co.jp, JP
 host-suffix, paypay.ne.jp, JP
 host-suffix, rakuten.co.jp, JP
+host-suffix, cdn.v2ex.com, JP
 # Static CDNs (small), fast response apis, Chinese apis and Chinese oversea CDNs
 host, abs.twimg.com, HK
 host, abs-0.twimg.com, HK

@@ -7,6 +7,8 @@ DOMAIN-SUFFIX, spotifycdn.com
 DOMAIN-SUFFIX, tplinkcloud.com
 DOMAIN-SUFFIX, larksuitecdn.com
 DOMAIN-SUFFIX, dl.google.com
+DOMAIN-SUFFIX, dl.delivery.mp.microsoft.com
+DOMAIN-SUFFIX, onecdn.static.microsoft
 DOMAIN, fonts.googleapis.com
 DOMAIN, assets.msn.com
 DOMAIN, r.bing.com
