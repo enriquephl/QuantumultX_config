@@ -10,5 +10,6 @@ HOST, client.wns.windows.com, MicrosoftDirect
 HOST, time.windows.com, MicrosoftDirect
 HOST, oneocsp.microsoft.com, MicrosoftDirect
 HOST, edge-http.microsoft.com, MicrosoftDirect
+HOST, img-s-msn-com.akamaized.net, MicrosoftDirect
 HOST-SUFFIX, edge.microsoft.com, MicrosoftDirect
 HOST-SUFFIX, onedrive.com, MicrosoftDirect

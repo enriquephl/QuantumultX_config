@@ -20,6 +20,7 @@ DOMAIN, api.appcenter.ms
 DOMAIN, client.wns.windows.com
 DOMAIN, time.windows.com
 DOMAIN, ntp.msn.com
+DOMAIN, img-s-msn-com.akamaized.net
 DOMAIN-SUFFIX, msftconnecttest.com
 DOMAIN, detectportal.firefox.com
 DOMAIN, o.pki.goog
