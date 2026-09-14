@@ -1,4 +1,5 @@
 DOMAIN, local.adguard.org
+DOMIAN, ad.line-scdn.net
 DOMAIN-SUFFIX, linkedin.cn
 DOMAIN-SUFFIX, mcdn.bilivideo.cn
 AND, ((IP-ASN, 714), (PROTOCOL, QUIC))
